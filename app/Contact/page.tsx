@@ -243,6 +243,40 @@ export default function ContactPage() {
   </motion.div>
 </section>
 
+{/* Lokasi Kami */}
+<section className="py-20 px-4 bg-white">
+  <div className="max-w-6xl mx-auto text-black text-center">
+    <motion.h3
+      className="text-2xl font-semibold mb-6"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      Lokasi Kami
+    </motion.h3>
+
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="rounded-xl overflow-hidden shadow-xl border border-gray-200"
+    >
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.4497131814937!2d106.94316567499128!3d-6.335745393653896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699300022c735f%3A0x1791bb0f6a0448d4!2sPT%20ANSEL%20MUDA%20BERKARYA!5e0!3m2!1sid!2sid!4v1752631383928!5m2!1sid!2sid"
+        width="100%"
+        height="450"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </motion.div>
+  </div>
+</section>
+
+
       <Footer />
     </div>
   );

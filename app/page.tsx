@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowRight,
@@ -70,7 +71,7 @@ function SplashScreen({ onComplete }: { onComplete: () => void }) {
           transition={{ delay: 0.8, duration: 0.8 }}
           className="text-base sm:text-lg md:text-xl text-blue-100"
         >
-          Selamat Datang di Maklon Terbaik Di Bumi
+          Selamat datang Di Maklon Terbaik Indonesia 
         </motion.p>
 
         <motion.div
@@ -242,76 +243,64 @@ function OperatingHoursSection() {
   );
 }
 
-// Services Section
 function ServicesSection() {
   const services = [
     {
-      title: "Web Development",
-      desc: "Modern, responsive websites built with cutting-edge technology.",
+      title: "Ini Agun Acuuuu",
+      image: "/images/agun.jpg",
     },
     {
-      title: "Mobile Apps",
-      desc: "Native and cross-platform mobile applications for iOS and Android.",
+      title: "Aku Ebyy haloo",
+      image: "/images/ebyy.jpg",
     },
     {
-      title: "Cloud Solutions",
-      desc: "Scalable cloud infrastructure and deployment solutions.",
-    },
-    {
-      title: "AI Integration",
-      desc: "Artificial intelligence solutions to automate and optimize processes.",
-    },
-    {
-      title: "Digital Marketing",
-      desc: "Comprehensive digital marketing strategies to grow your business.",
-    },
-    {
-      title: "Consulting",
-      desc: "Expert consultation to guide your digital transformation journey.",
+      title: "Pengemasan",
+      image: "/images/sring.jpg",
     },
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Our Services
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We offer comprehensive solutions tailored to meet your unique
-            business needs.
-          </p>
-        </motion.div>
+    <section className="py-20 px-6 bg-white text-center">
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="mb-12"
+      >
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">Layanan Kami</h2>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Kami hadir memberikan solusi menyeluruh dalam pengembangan produk kecantikan: dari formulasi, produksi, hingga pengemasan.
+        </p>
+      </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -10 }}
-            >
-              <Card className="h-full hover:shadow-xl transition-all duration-300 border-0 bg-white">
-                <CardContent className="p-8">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg mb-6"></div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600">{service.desc}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {services.map((item, index) => (
+          <motion.div
+            key={index}
+            className="rounded-xl overflow-hidden shadow-lg cursor-pointer group"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.03 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            viewport={{ once: true }}
+          >
+            <Link href="/Service">
+              <div className="relative w-full h-[300px]">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition" />
+                <div className="absolute bottom-4 left-4 text-left text-white z-10">
+                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

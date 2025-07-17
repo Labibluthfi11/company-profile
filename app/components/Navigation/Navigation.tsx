@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState<boolean | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [aboutHover, setAboutHover] = useState(false);
 
@@ -14,24 +14,29 @@ export default function Navigation() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
+    // Initial check
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const menuItems = [
     { name: "About", path: "/about", isDropdown: true },
-    { name: "Services", path: "/services" },
-    { name: "Team", path: "#team" },
+    { name: "Service", path: "/Service" },
+    { name: "Product", path: "/Product" },
     { name: "Contact", path: "/Contact" },
   ];
 
   const aboutDropdown = [
     { name: "Who we are", path: "/about/who-we-are" },
-    { name: "PT Ansel History", path: "/about/history" },
+    { name: "PT Ansel History", path: "/history" },
     { name: "Certification", path: "/Certification" },
-    { name: "Where we are", path: "/about/location" },
-    { name: "Our Partners", path: "/about/partners" },
   ];
+
+  // Tunggu sampai mount selesai baru render
+  if (isScrolled === null) return null;
 
   return (
     <motion.nav
@@ -147,8 +152,7 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Mobile Menu (optional: bisa kamu tambahkan submenu juga di mobile) */}
-        
+        {/* Optional: Mobile Menu bisa kamu lanjutkan di sini */}
       </div>
     </motion.nav>
   );

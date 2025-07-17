@@ -18,7 +18,7 @@ export default function Footer() {
           <h4 className="font-bold mb-4">OUR COMPANY</h4>
           <ul className="space-y-2 text-gray-400">
             <li><a href="/about/who-we-are">Who we are</a></li>
-            <li><a href="/about/history">PT Ansel History</a></li>
+            <li><a href="/history">PT Ansel History</a></li>
             <li><a href="/Certification">Certification</a></li>
             <li><a href="/about/location">Where we are</a></li>
             <li><a href="/about/partners">Our Partners</a></li>
@@ -29,8 +29,8 @@ export default function Footer() {
         <div>
           <h4 className="font-bold mb-4">WHAT WE OFFER</h4>
           <ul className="space-y-2 text-gray-400">
-            <li><a href="#">Product</a></li>
-            <li><a href="#">Service</a></li>
+            <li><a href="/Product">Product</a></li>
+            <li><a href="/Service">Service</a></li>
           </ul>
         </div>
 
@@ -70,7 +70,7 @@ export default function Footer() {
 
         {/* Sosmed Icons */}
         <div className="flex justify-center space-x-4 mb-4 text-white text-lg">
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/share/19kRjfS4Zd/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
             <FaFacebookF className="hover:text-blue-400 transition" />
           </a>
           <a href="hhttps://www.instagram.com/ansel.mudaberkarya?igsh=MW9uOXo0ZWppZWw3&utm_source=qr" target="_blank" rel="noopener noreferrer">
