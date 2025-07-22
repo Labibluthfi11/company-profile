@@ -20,8 +20,6 @@ export default function Footer() {
             <li><a href="/about/who-we-are">Who we are</a></li>
             <li><a href="/history">PT Ansel History</a></li>
             <li><a href="/Certification">Certification</a></li>
-            <li><a href="/about/location">Where we are</a></li>
-            <li><a href="/about/partners">Our Partners</a></li>
           </ul>
         </div>
 

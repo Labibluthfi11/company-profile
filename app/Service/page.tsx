@@ -37,10 +37,10 @@ export default function ServicePage() {
 
       {/* Hero Section */}
       <section
-        className="min-h-[70vh] flex items-center justify-center text-center relative bg-cover bg-center pt-24"
-        style={{ backgroundImage: "url('/images/ansel.jpg')" }}
+        className="min-h-[70vh] bg-[#D7C4A3] flex items-center justify-center text-center relative bg-cover bg-center pt-24"
+        
       >
-        <div className="absolute inset-0 bg-black/60" />
+        
         <motion.div
           className="relative z-10 px-4"
           initial={{ opacity: 0, y: 40 }}
@@ -48,7 +48,7 @@ export default function ServicePage() {
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="text-white text-4xl md:text-5xl font-bold mb-4"
+            className="text-black text-4xl md:text-5xl font-bold mb-4"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -56,7 +56,7 @@ export default function ServicePage() {
             Layanan Kami
           </motion.h1>
           <motion.p
-            className="text-white text-lg max-w-3xl mx-auto"
+            className="text-black text-lg max-w-3xl mx-auto"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
@@ -107,120 +107,6 @@ export default function ServicePage() {
           </div>
         </div>
       </section>
-
-      {/* Section Gambar Kiri, Deskripsi Kanan */}
-      <section className="bg-white py-24 px-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Gambar */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src="/images/filing2.jpg"
-              alt="Lab Produksi"
-              className="rounded-2xl shadow-xl object-cover w-full h-full max-h-[500px]"
-            />
-          </motion.div>
-
-          {/* Deskripsi */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Ruang pengemasan
-            </h3>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Ruang pengemasan kami dirancang khusus dengan standar kebersihan
-              dan efisiensi tinggi. Setiap produk dikemas oleh tim berpengalaman
-              dalam lingkungan steril untuk menjaga kualitas, keamanan, dan
-              estetika produk sebelum sampai ke tangan pelanggan Anda.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section Gambar Kiri, Deskripsi Kanan */}
-      <section className="bg-white py-24 px-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Gambar */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src="/images/mixing.jpg"
-              alt="Lab Produksi"
-              className="rounded-2xl shadow-xl object-cover w-full h-full max-h-[500px]"
-            />
-          </motion.div>
-
-          {/* Deskripsi */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Ruang mixing
-            </h3>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Di ruang mixing kami, bahan-bahan berkualitas tinggi diproses
-              dengan presisi dalam lingkungan steril dan terkontrol. Proses
-              pencampuran dilakukan oleh tenaga ahli menggunakan mesin
-              berstandar industri untuk menjamin stabilitas dan performa formula
-              yang konsisten.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section Gambar Kiri, Deskripsi Kanan */}
-      <section className="bg-white py-24 px-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Gambar */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src="/images/ara.jpg
-              "
-              alt="Lab Produksi"
-              className="rounded-2xl shadow-xl object-cover w-full h-full max-h-[500px]"
-            />
-          </motion.div>
-
-          {/* Deskripsi */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Fasilitas Produksi Modern
-            </h3>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Kami memiliki laboratorium yang dilengkapi dengan teknologi modern
-              untuk memastikan kualitas dan keamanan produk. Tim ahli kami
-              bekerja dengan presisi tinggi dalam menciptakan formula terbaik
-              untuk brand Anda.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Section Gambar Kiri, Deskripsi Kanan */}
       <section className="bg-white py-24 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -260,12 +146,148 @@ export default function ServicePage() {
               dengan teliti dan professional, Bersama kami Project Development
               yang anda inginkan jadi lebih mudah, cepat, dan tepat sasaran.
             </p>
-            
           </motion.div>
         </div>
       </section>
+      {/* Section Gambar Kiri, Deskripsi Kanan */}
+      <section className="bg-white py-24 px-4">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Gambar */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <img
+              src="/images/labun.jpg
+              "
+              alt="Lab Produksi"
+              className="rounded-2xl shadow-xl object-cover w-full h-full max-h-[500px]"
+            />
+          </motion.div>
+
+          {/* Deskripsi */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              Ruang Lab Kimia Fisika
+            </h3>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Laboratorium adalah fasilitas ruangan yang kami rancang untuk
+              penelitian, praktikum, formulasi, dan pengujian produk-produk
+              kosmetik. Laboratorium ini dilengkapi dengan peralatan dan
+              perlengkapan khusus untuk mencampur bahan aktif, mengukur
+              stabilitas produk, serta memastikan keamanan dan kualitas sesuai
+              standar industri kosmetik.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+      {/* Section Gambar Kiri, Deskripsi Kanan */}
+      <section className="bg-white py-24 px-4">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Gambar */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <img
+              src="/images/mixing.jpg"
+              alt="Lab Produksi"
+              className="rounded-2xl shadow-xl object-cover w-full h-full max-h-[500px]"
+            />
+          </motion.div>
+
+          {/* Deskripsi */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              Ruang mixing
+            </h3>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Di ruang mixing kami, bahan-bahan berkualitas tinggi diproses
+              dengan presisi dalam lingkungan steril dan terkontrol. Proses
+              pencampuran dilakukan oleh tenaga ahli menggunakan mesin
+              berstandar industri untuk menjamin stabilitas dan performa formula
+              yang konsisten.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+
+      {/* Section Gambar Kiri, Deskripsi Kanan */}
+      <section className="bg-white py-24 px-4">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Gambar */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            
+          >
+            <img
+              src="/images/filing2.jpg"
+              alt="Lab Produksi"
+              className="rounded-2xl shadow-xl object-cover w-full h-full max-h-[500px]"
+            />
+          </motion.div>
+
+          {/* Deskripsi */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              Ruang pengemasan
+            </h3>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Ruang pengemasan kami dirancang khusus dengan standar kebersihan
+              dan efisiensi tinggi. Setiap produk dikemas oleh tim berpengalaman
+              dalam lingkungan steril untuk menjaga kualitas, keamanan, dan
+              estetika produk sebelum sampai ke tangan pelanggan Anda.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+
+
 
       <Footer />
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

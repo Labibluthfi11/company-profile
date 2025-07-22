@@ -41,7 +41,7 @@ export default function Navigation() {
   return (
     <motion.nav
       className={`fixed top-0 w-full z-40 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+        isScrolled ? "bg-white backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -55,7 +55,7 @@ export default function Navigation() {
             className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200"
           >
             <Image
-              src={isScrolled ? "/images/cihuy.png" : "/images/amb-putih.png"}
+              src="/images/cihuy.png"
               alt="Logo AMBA"
               width={60}
               height={60}
@@ -63,7 +63,7 @@ export default function Navigation() {
             />
             <span
               className={`text-lg sm:text-xl md:text-3xl font-bold ${
-                isScrolled ? "text-gray-900" : "text-white"
+                isScrolled ? "text-gray-900" : "text-black"
               }`}
             >
               PT. Ansel Muda Berkarya
@@ -82,7 +82,7 @@ export default function Navigation() {
                 >
                   <motion.span
                     className={`cursor-pointer hover:text-blue-600 ${
-                      isScrolled ? "text-gray-700" : "text-white"
+                      isScrolled ? "text-gray-700" : "text-black"
                     }`}
                     whileHover={{ y: -2 }}
                   >
@@ -96,7 +96,7 @@ export default function Navigation() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -5 }}
                         className={`absolute mt-2 py-3 px-4 rounded-xl shadow-xl w-52 ${
-                          isScrolled ? "bg-white" : "bg-black"
+                          isScrolled ? "bg-white" : "bg-white"
                         }`}
                       >
                         {aboutDropdown.map((sub, index) => (
@@ -104,7 +104,7 @@ export default function Navigation() {
                             key={index}
                             href={sub.path}
                             className={`block py-2 text-sm font-medium ${
-                              isScrolled ? "text-gray-800" : "text-white"
+                              isScrolled ? "text-gray-800" : "text-black"
                             } hover:text-blue-600 transition-colors`}
                           >
                             {sub.name}
@@ -119,7 +119,7 @@ export default function Navigation() {
                   key={item.name}
                   href={item.path}
                   className={`hover:text-blue-600 transition-colors ${
-                    isScrolled ? "text-gray-700" : "text-white"
+                    isScrolled ? "text-gray-700" : "text-black"
                   }`}
                   whileHover={{ y: -2 }}
                 >
@@ -139,7 +139,7 @@ export default function Navigation() {
                 strokeWidth={1.5}
                 stroke="currentColor"
                 className={`w-6 h-6 ${
-                  isScrolled ? "text-gray-900" : "text-white"
+                  isScrolled ? "text-black" : "text-black"
                 }`}
               >
                 <path

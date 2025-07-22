@@ -3,6 +3,7 @@
 import Navigation from "@/components/Navigation/Navigation";
 import Footer from "@/components/Footer/Footer";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function WhoWeArePage() {
   return (
@@ -45,13 +46,15 @@ export default function WhoWeArePage() {
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
-      <motion.img
-        src="/Products/skincare.png"
-        alt="Skincare"
-        className="w-64 h-64 object-cover rounded-xl shadow-lg"
-        whileHover={{ scale: 1.03 }}
-        transition={{ duration: 0.3 }}
-      />
+              <Link href="/Product/Skincare">
+          <motion.img
+            src="/Products/skincare.png"
+            alt="Skincare"
+            className="w-64 h-64 object-cover rounded-xl shadow-lg cursor-pointer"
+            whileHover={{ scale: 1.05, rotate: 2 }}
+            transition={{ duration: 0.3 }}
+          />
+        </Link>
       <div className="md:w-2/3">
         <h2 className="text-3xl font-bold mb-4 text-gray-800">Skincare</h2>
         <ul className="text-gray-600 text-sm space-y-1">
@@ -104,7 +107,7 @@ export default function WhoWeArePage() {
       <div className="md:w-2/3">
         <h2 className="text-3xl font-bold mb-4 text-gray-800">Fragrance</h2>
         <ul className="text-gray-600 text-sm space-y-1">
-          <li><strong>Perfume:</strong> Body Mist, Hair Mist, Eau de Parfume</li>
+          <li><strong>Perfume:</strong> Body Mist, Hair Mist, Eau de Parfume, Extrait de Parfume, Eau de Toilette</li>
         </ul>
       </div>
     </motion.div>

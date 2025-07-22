@@ -11,10 +11,9 @@ export default function historyPage() {
 
       {/* Hero section atas dengan animasi */}
       <section
-        className="min-h-[70vh] flex items-center justify-center text-center relative bg-cover bg-center pt-24"
-        style={{ backgroundImage: "url('/images/ansel.jpg')" }}
+        className="min-h-[70vh] bg-[#D7C4A3] flex items-center justify-center text-center relative bg-cover bg-center pt-24"
       >
-        <div className="absolute inset-0 bg-black/60" />
+        
         <motion.div
           className="relative z-10 px-4"
           initial={{ opacity: 0, y: 40 }}
@@ -22,7 +21,7 @@ export default function historyPage() {
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="text-white text-4xl md:text-5xl font-bold mb-4"
+            className="text-black text-4xl md:text-5xl font-bold mb-4"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -45,8 +44,10 @@ export default function historyPage() {
       <div className="absolute left-1/2 top-0 transform -translate-x-1/2 w-1 bg-gray-300 h-full z-0"></div>
 
       {[
-        { year: "2024 ", desc: "PT. Ansel Muda Berkarya didirikan dan mulai mengembangkan fasilitas produksi." },
-        { year: "2025", desc: "Memperoleh izin edar BPOM dan menjalin kerjasama dengan brand lokal pertama." },
+        { year: "18-July-2024 ", desc: "Launching PT. Ansel Muda Berkarya." },
+        { year: "15-Oktober-2024", desc: "Memperoleh sertifikasi CPKB." },
+        { year: "10-January-2025", desc: "Mulai berproduksi ." },
+        { year: "06-july-2025", desc: "Memperoleh sertifikasi halal dari MUI." },
         // Tambah tahun dan deskripsi lainnya di sini
       ].map((item, index) => (
         <motion.div

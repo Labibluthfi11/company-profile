@@ -19,6 +19,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Footer from "@/components/Footer/Footer";
+    
 
 import Navigation from "@/components/Navigation/Navigation";
 
@@ -82,7 +83,7 @@ function SplashScreen({ onComplete }: { onComplete: () => void }) {
         >
           <div className="w-16 h-1 bg-white mx-auto rounded-full">
             <motion.div
-              className="h-full bg-yellow-400 rounded-full"
+              className="h-full bg-yellow-700 rounded-full"
               initial={{ width: 0 }}
               animate={{ width: "100%" }}
               transition={{ delay: 1.5, duration: 1 }}
@@ -100,8 +101,7 @@ function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center relative pt-24 md:pt-0"
-      style={{ backgroundImage: "url('/images/ansel.jpg')" }}
+      className="min-h-screen bg-[#D7C4A3] bg-cover bg-center bg-no-repeat flex items-center relative pt-24 md:pt-0"
     >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -111,10 +111,10 @@ function HeroSection() {
             transition={{ duration: 1, delay: 0.2 }}
             className="text-center lg:text-left"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4 leading-tight">
               PT. Ansel Muda Berkarya
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-white mb-6 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-black mb-6 leading-relaxed">
               Mitra strategis Anda dalam industri kecantikan. Kami adalah spesialis
               manufaktur kosmetik yang berkomitmen pada kualitas, keamanan,
               dan efisiensi dalam setiap proses produksi.
@@ -122,41 +122,37 @@ function HeroSection() {
           </motion.div>
 
           <motion.div
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="w-full max-w-md mx-auto"
-          >
-            <div className="relative h-80 sm:h-96">
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-3xl"
-                animate={{ rotate: [0, 5, -5, 0] }}
-                transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY }}
-              />
-              <motion.div
-                className="absolute inset-4 bg-white rounded-2xl flex flex-col items-center justify-center text-center px-4"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
-              >
-                <Image
-                  src="/images/cihuy.png"
-                  alt="Logo AMBA"
-                  width={100}
-                  height={100}
-                  className="mb-2 object-contain"
-                />
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900">
-                  PT. Ansel Muda Berkarya
-                </h3>
-              </motion.div>
-            </div>
-          </motion.div>
+  initial={{ x: 100, opacity: 0 }}
+  animate={{ x: 0, opacity: 1 }}
+  transition={{ duration: 1, delay: 0.4 }}
+  className="w-full max-w-md mx-auto"
+>
+  <div className="relative h-80 sm:h-96">
+    <motion.div
+      className="absolute inset-0 bg-gradient-to-r from-yellow-700 to-yellow-600 rounded-xloverflow-hidden"
+      animate={{ rotate: [0, 5, -5, 0] }}
+      transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY }}
+    />
+    <motion.div
+      className="absolute inset-4 bg-white rounded-2xl overflow-hidden" // tambahkan overflow-hidden
+      animate={{ y: [0, -10, 0] }}
+      transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
+    >
+      <Image
+        src="/images/skincare.png"
+        alt="Logo AMBA"
+        fill  // otomatis akan membuat w-full dan h-full
+        className="object-cover" // ubah dari object-contain
+      />
+    </motion.div>
+  </div>
+</motion.div>
+
         </div>
       </div>
     </section>
   );
 }
-
 
 // About Section
 function AboutSection() {
@@ -172,7 +168,7 @@ function AboutSection() {
             viewport={{ once: true }}
           >
             <img
-              src="/images/lab.jpg"
+              src="/images/lab-nu.jpg"
               alt="Lab PT Ansel"
               className="rounded-xl w-full h-auto object-cover"
             />
@@ -202,8 +198,7 @@ function AboutSection() {
 function OperatingHoursSection() {
   return (
     <section
-      className="relative bg-cover bg-center py-16"
-      style={{ backgroundImage: "url('/images/botol.jpg')" }}
+      className="relative bg-[#D7C4A3] bg-center py-16"
     >
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
@@ -213,7 +208,7 @@ function OperatingHoursSection() {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-white text-2xl font-semibold mb-6 md:mb-0 md:max-w-md"
+            className="text-black text-2xl font-semibold mb-6 md:mb-0 md:max-w-md"
           >
             <p>Pelayanan Kita Dari Jam 8 Pagi</p>
             <p>Sampai 5 Sore</p>
@@ -227,7 +222,7 @@ function OperatingHoursSection() {
             viewport={{ once: true }}
             className="bg-white rounded-xl px-6 py-4 shadow-lg flex items-center space-x-4"
           >
-            <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-[#D7C4A3] rounded-full flex items-center justify-center">
               <Phone className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -246,16 +241,16 @@ function OperatingHoursSection() {
 function ServicesSection() {
   const services = [
     {
-      title: "Ini Agun Acuuuu",
-      image: "/images/agun.jpg",
+      title: "Ruang Pengemasan",
+      image: "/images/filing2.jpg",
     },
     {
-      title: "Aku Ebyy haloo",
-      image: "/images/ebyy.jpg",
+      title: "Project Development",
+      image: "/images/meeting.jpg",
     },
     {
-      title: "Pengemasan",
-      image: "/images/sring.jpg",
+      title: "Lab Kimia Fisika",
+      image: "/images/labun.jpg",
     },
   ];
 

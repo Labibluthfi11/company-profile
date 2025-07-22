@@ -11,10 +11,9 @@ export default function CertificationPage() {
 
       {/* Hero section atas dengan animasi */}
       <section
-        className="min-h-[70vh] flex items-center justify-center text-center relative bg-cover bg-center pt-24"
-        style={{ backgroundImage: "url('/images/ansel.jpg')" }}
+        className="min-h-[70vh] bg-[#D7C4A3] flex items-center justify-center text-center relative bg-cover bg-center pt-24"
       >
-        <div className="absolute inset-0 bg-black/60" />
+        
         <motion.div
           className="relative z-10 px-4"
           initial={{ opacity: 0, y: 40 }}
@@ -22,7 +21,7 @@ export default function CertificationPage() {
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="text-white text-4xl md:text-5xl font-bold mb-4"
+            className="text-black text-4xl md:text-5xl font-bold mb-4"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -30,7 +29,7 @@ export default function CertificationPage() {
             Sertifikasi Kami
           </motion.h1>
           <motion.p
-            className="text-white text-lg max-w-3xl mx-auto"
+            className="text-black text-lg max-w-3xl mx-auto"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
