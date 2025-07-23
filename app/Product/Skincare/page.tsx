@@ -16,7 +16,7 @@ export default function SkincarePage() {
       <section className="relative">
         <div className="relative h-[60vh] w-full">
           <Image
-            src="/images/skincare.png"
+            src="/Products/skincare.png"
             alt="Skincare Product"
             fill
             className="object-cover"
@@ -45,9 +45,10 @@ export default function SkincarePage() {
             Skincare untuk Kulit Sehat & Bersinar
           </h2>
           <p className="text-lg text-gray-600 mb-16 text-center">
-            Rangkaian perawatan wajah terbaik kami diformulasikan untuk
-            membersihkan, melembapkan, dan melindungi kulit Anda. Sebagian skincare kami terbuat dari
-            bahan alami berkualitas, aman untuk semua jenis kulit.
+            Rangkaian produk perawatan kulit yang diformulasikan dengan
+            teknologi terkemuka, konsep yang menarik, bahan baku yang unik,
+            berkualitas, terjamin keamanan dan terbukti menghasilkan manfaat
+            sesuai standar pengujian ilmiah terkini
           </p>
         </motion.div>
 
@@ -101,20 +102,6 @@ export default function SkincarePage() {
           </motion.div>
         </div>
 
-        {/* Kembali Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-20 text-center"
-        >
-          <Link
-            href="/Product"
-            className="inline-block bg-gray-900 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300"
-          >
-            Kembali ke Produk
-          </Link>
-        </motion.div>
       </section>
 
       {/* Footer */}

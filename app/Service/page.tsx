@@ -48,7 +48,7 @@ export default function ServicePage() {
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="text-black text-4xl md:text-5xl font-bold mb-4"
+            className="text-white text-4xl md:text-5xl font-bold mb-4"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -56,7 +56,7 @@ export default function ServicePage() {
             Layanan Kami
           </motion.h1>
           <motion.p
-            className="text-black text-lg max-w-3xl mx-auto"
+            className="text-white text-lg max-w-3xl mx-auto"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}

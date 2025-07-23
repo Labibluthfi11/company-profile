@@ -11,7 +11,7 @@ export default function WhoWeArePage() {
 
       {/* Hero section atas dengan animasi */}
       <section
-        className="min-h-[70vh] bg-[#D7C4A3] flex items-center justify-center text-center relative bg-cover bg-center pt-24"
+        className="min-h-[70vh] bg-[#f7eac9] flex items-center justify-center text-center relative bg-cover bg-center pt-24"
       >
         
         <motion.div
@@ -95,7 +95,7 @@ export default function WhoWeArePage() {
                 <p className="text-sm text-gray-600 mt-1">Years in Business</p>
               </div>
               <div>
-                <h3 className="text-4xl font-bold text-black-600">3k+</h3>
+                <h3 className="text-4xl font-bold text-black-600">20+</h3>
                 <p className="text-sm text-gray-600 mt-1">Clients Served</p>
               </div>
             </div>

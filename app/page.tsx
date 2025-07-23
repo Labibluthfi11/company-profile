@@ -101,7 +101,7 @@ function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-screen bg-[#D7C4A3] bg-cover bg-center bg-no-repeat flex items-center relative pt-24 md:pt-0"
+      className="min-h-screen bg-[#dbd4bb] bg-cover bg-center bg-no-repeat flex items-center relative pt-24 md:pt-0"
     >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -119,40 +119,50 @@ function HeroSection() {
               manufaktur kosmetik yang berkomitmen pada kualitas, keamanan,
               dan efisiensi dalam setiap proses produksi.
             </p>
+
+            {/* Tombol Hubungi Kami */}
+            <a
+              href="https://wa.me/6285891096731" // Nomor WA, format 62
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-black font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-200 transition duration-300"
+            >
+              Hubungi Kami
+            </a>
           </motion.div>
 
           <motion.div
-  initial={{ x: 100, opacity: 0 }}
-  animate={{ x: 0, opacity: 1 }}
-  transition={{ duration: 1, delay: 0.4 }}
-  className="w-full max-w-md mx-auto"
->
-  <div className="relative h-80 sm:h-96">
-    <motion.div
-      className="absolute inset-0 bg-gradient-to-r from-yellow-700 to-yellow-600 rounded-xloverflow-hidden"
-      animate={{ rotate: [0, 5, -5, 0] }}
-      transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY }}
-    />
-    <motion.div
-      className="absolute inset-4 bg-white rounded-2xl overflow-hidden" // tambahkan overflow-hidden
-      animate={{ y: [0, -10, 0] }}
-      transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
-    >
-      <Image
-        src="/images/skincare.png"
-        alt="Logo AMBA"
-        fill  // otomatis akan membuat w-full dan h-full
-        className="object-cover" // ubah dari object-contain
-      />
-    </motion.div>
-  </div>
-</motion.div>
-
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="w-full max-w-md mx-auto"
+          >
+            <div className="relative h-80 sm:h-96">
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-yellow-700 to-yellow-600 rounded-xloverflow-hidden"
+                animate={{ rotate: [0, 5, -5, 0] }}
+                transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY }}
+              />
+              <motion.div
+                className="absolute inset-4 bg-white rounded-2xl overflow-hidden"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
+              >
+                <Image
+                  src="/images/brands.jpg"
+                  alt="Logo AMBA"
+                  fill
+                  className="object-cover"
+                />
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
   );
 }
+
 
 // About Section
 function AboutSection() {
@@ -182,10 +192,10 @@ function AboutSection() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              PT. Ansel Muda Berkarya is your strategic partner in the beauty industry.
+             PT. Ansel Muda Berkarya adalah mitra strategis Anda di industri kecantikan.
             </h2>
             <p className="text-lg text-gray-600">
-              We combine nature, science, and precision to produce high-quality cosmetic products that reflect elegance, safety, and innovation.
+              Kami menggabungkan alam, sains, dan presisi untuk memproduksi produk kosmetik berkualitas tinggi yang mencerminkan keanggunan, keamanan, dan inovasi.
             </p>
           </motion.div>
         </div>
@@ -315,7 +325,7 @@ function BrandsPartnersSection() {
     <section id="brands" className="py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-4 text-center mb-10">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          Our Brand Partners
+           Partner Brand Kami
         </h2>
       </div>
 

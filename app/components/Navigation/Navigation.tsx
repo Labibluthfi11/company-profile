@@ -9,15 +9,14 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState<boolean | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [aboutHover, setAboutHover] = useState(false);
+  const [productHover, setProductHover] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    // Initial check
     handleScroll();
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -25,7 +24,7 @@ export default function Navigation() {
   const menuItems = [
     { name: "About", path: "/about", isDropdown: true },
     { name: "Service", path: "/Service" },
-    { name: "Product", path: "/Product" },
+    { name: "Product", path: "/product", isDropdown: true },
     { name: "Contact", path: "/Contact" },
   ];
 
@@ -35,7 +34,11 @@ export default function Navigation() {
     { name: "Certification", path: "/Certification" },
   ];
 
-  // Tunggu sampai mount selesai baru render
+  const productDropdown = [
+    { name: "Skincare", path: "/Product/Skincare" },
+    { name: "Parfum", path: "/Product/Parfum" },
+  ];
+
   if (isScrolled === null) return null;
 
   return (
@@ -72,49 +75,90 @@ export default function Navigation() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6 relative">
-            {menuItems.map((item) =>
-              item.isDropdown ? (
-                <div
-                  key={item.name}
-                  className="relative"
-                  onMouseEnter={() => setAboutHover(true)}
-                  onMouseLeave={() => setAboutHover(false)}
-                >
-                  <motion.span
-                    className={`cursor-pointer hover:text-blue-600 ${
-                      isScrolled ? "text-gray-700" : "text-black"
-                    }`}
-                    whileHover={{ y: -2 }}
+            {menuItems.map((item) => {
+              if (item.name === "About") {
+                return (
+                  <div
+                    key={item.name}
+                    className="relative"
+                    onMouseEnter={() => setAboutHover(true)}
+                    onMouseLeave={() => setAboutHover(false)}
                   >
-                    {item.name}
-                  </motion.span>
+                    <motion.span
+                      className={`cursor-pointer hover:text-blue-600 ${
+                        isScrolled ? "text-gray-700" : "text-black"
+                      }`}
+                      whileHover={{ y: -2 }}
+                    >
+                      {item.name}
+                    </motion.span>
 
-                  <AnimatePresence>
-                    {aboutHover && (
-                      <motion.div
-                        initial={{ opacity: 0, y: -5 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -5 }}
-                        className={`absolute mt-2 py-3 px-4 rounded-xl shadow-xl w-52 ${
-                          isScrolled ? "bg-white" : "bg-white"
-                        }`}
-                      >
-                        {aboutDropdown.map((sub, index) => (
-                          <Link
-                            key={index}
-                            href={sub.path}
-                            className={`block py-2 text-sm font-medium ${
-                              isScrolled ? "text-gray-800" : "text-black"
-                            } hover:text-blue-600 transition-colors`}
-                          >
-                            {sub.name}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ) : (
+                    <AnimatePresence>
+                      {aboutHover && (
+                        <motion.div
+                          initial={{ opacity: 0, y: -5 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -5 }}
+                          className="absolute mt-2 py-3 px-4 rounded-xl shadow-xl w-52 bg-white"
+                        >
+                          {aboutDropdown.map((sub, index) => (
+                            <Link
+                              key={index}
+                              href={sub.path}
+                              className="block py-2 text-sm font-medium text-gray-800 hover:text-blue-600 transition-colors"
+                            >
+                              {sub.name}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              }
+
+              if (item.name === "Product") {
+                return (
+                  <div
+                    key={item.name}
+                    className="relative"
+                    onMouseEnter={() => setProductHover(true)}
+                    onMouseLeave={() => setProductHover(false)}
+                  >
+                    <motion.span
+                      className={`cursor-pointer hover:text-blue-600 ${
+                        isScrolled ? "text-gray-700" : "text-black"
+                      }`}
+                      whileHover={{ y: -2 }}
+                    >
+                      {item.name}
+                    </motion.span>
+
+                    <AnimatePresence>
+                      {productHover && (
+                        <motion.div
+                          initial={{ opacity: 0, y: -5 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -5 }}
+                          className="absolute mt-2 py-3 px-4 rounded-xl shadow-xl w-52 bg-white"
+                        >
+                          {productDropdown.map((sub, index) => (
+                            <Link
+                              key={index}
+                              href={sub.path}
+                              className="block py-2 text-sm font-medium text-gray-800 hover:text-blue-600 transition-colors"
+                            >
+                              {sub.name}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              }
+
+              return (
                 <motion.a
                   key={item.name}
                   href={item.path}
@@ -125,8 +169,8 @@ export default function Navigation() {
                 >
                   {item.name}
                 </motion.a>
-              )
-            )}
+              );
+            })}
           </div>
 
           {/* Toggle Button Mobile */}
@@ -138,9 +182,7 @@ export default function Navigation() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className={`w-6 h-6 ${
-                  isScrolled ? "text-black" : "text-black"
-                }`}
+                className={`w-6 h-6 ${isScrolled ? "text-black" : "text-black"}`}
               >
                 <path
                   strokeLinecap="round"
@@ -152,7 +194,7 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Optional: Mobile Menu bisa kamu lanjutkan di sini */}
+        {/* Mobile menu (optional) bisa ditambah di sini */}
       </div>
     </motion.nav>
   );
