@@ -10,9 +10,7 @@ export default function WhoWeArePage() {
       <Navigation />
 
       {/* Hero section atas dengan animasi */}
-      <section
-        className="min-h-[70vh] bg-[#f7eac9] flex items-center justify-center text-center relative bg-cover bg-center pt-24"
-      >
+      <section className="absolute inset-0 bg-gradient-to-b from-[#123c70] to-[#0a1a2f] z-0 min-h-[60vh] flex items-center justify-center text-center relative bg-cover bg-center pt-24">
         
         <motion.div
           className="relative z-10 px-4"
@@ -21,29 +19,26 @@ export default function WhoWeArePage() {
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="text-black text-4xl md:text-5xl font-bold mb-4"
+            className="text-white text-4xl md:text-5xl font-bold mb-4"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            SIAPA KAMI ?
+            WHO WE ARE
           </motion.h1>
           <motion.p
-            className="text-black text-lg max-w-3xl mx-auto"
+            className="text-white text-lg max-w-3xl mx-auto"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            PT. Ansel Muda Berkarya adalah industri kreativitas tanpa batas
-            terutama di bidang wangi-wangian. Kami memiliki layanan dalam bidang
-            produksi dan pengembangan produk kreatif, otentik dan unik dengan
-            penggunaan bahan baku alami di Indonesia.
+            PT. Ansel Muda Berkarya is an industry of limitless creativity, particularly in the field of fragrances. We provide services in the production and development of creative, authentic, and unique products, utilizing natural ingredients sourced from Indonesia.
           </motion.p>
         </motion.div>
       </section>
 
       {/* Section tambahan: Perjalanan Kami */}
-      <section className="py-20 px-6 bg-gray-50 text-gray-800">
+      <section className="py-20 px-6 bg-white text-gray-800">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           {/* Gambar kiri */}
           <motion.div
@@ -67,25 +62,13 @@ export default function WhoWeArePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-snug">
-              Perjalanan Kami Berawal dari Ide Sederhana
+              Our journey began with a simple idea
             </h2>
             <p className="mb-4 text-gray-700">
-              menjadi mitra terpercaya bagi merek-merek yang bermimpi
-              meluncurkan produk kosmetik berkualitas tinggi tanpa perlu
-              membangun pabrik atau mengelola proses produksi yang rumit. PT.
-              Ansel Muda Berkarya didirikan dengan misi yang jelas — menyediakan
-              solusi manufaktur kosmetik menyeluruh yang tidak hanya efisien,
-              tetapi juga menjunjung tinggi standar keamanan, kreativitas, dan
-              keunggulan.
+              To become a trusted partner for brands aspiring to launch high-quality cosmetic products without the need to build factories or manage complex production processes.  PT. Ansel Muda Berkarya was founded with a clear mission to provide comprehensive cosmetic manufacturing solutions that are not only efficient, but also uphold the highest standards of safety, creativity, and excellence.
             </p>
             <p className="text-gray-700">
-              Kami percaya bahwa setiap merek memiliki kisah yang unik, dan
-              peran kami adalah mewujudkan kisah tersebut melalui produk-produk
-              yang dibuat khusus seperti sampo, sabun mandi, toner, parfum, dan
-              masih banyak lagi. Dengan memadukan teknologi manufaktur modern
-              dengan pemahaman mendalam tentang pasar kecantikan, kami
-              memastikan setiap formula yang kami hasilkan selaras dengan
-              nilai-nilai merek Anda dan harapan pelanggan Anda.
+              We believe that every brand has a unique story, and our role is to bring that story to life through tailor-made products such as shampoos, body washes, toners, perfumes, and many more. By combining modern manufacturing technology with deep insights into the beauty market, we ensure that every formula we create aligns with your brand’s values and your customers’ expectations.
             </p>
 
             {/* Statistik */}
@@ -128,33 +111,31 @@ export default function WhoWeArePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black-700 leading-snug">
-              Visi & Misi
+              Vision & Mission
             </h2>
 
             {/* Visi */}
             <div className="mb-6">
-              <h3 className="text-xl font-semibold text-gray-700 mb-2">VISI</h3>
+              <h3 className="text-xl font-semibold text-gray-700 mb-2">VISION</h3>
               <p className="text-gray-600">
-                Menciptakan industri kreatifitas tanpa batas terutama di bidang
-                wangi-wangian
+                Creating global marketing without boundaries or limitations.
               </p>
             </div>
 
             {/* Misi */}
             <div>
-              <h3 className="text-xl font-semibold text-gray-700 mb-2">MISI</h3>
+              <h3 className="text-xl font-semibold text-gray-700 mb-2">MISSION</h3>
               <ul className="list-disc pl-5 space-y-2 text-gray-600">
-                <li>Penggunaan bahan baku alami Indonesia</li>
+                <li>Utilizing natural raw materials from Indonesia.</li>
                 <li>
-                  Mengedukasi dan mengadvokasi customer dalam berkreasi di
-                  bidang wangi-wangian
+                  Educating and advocating customers in exploring creativity within the world of fragrances.
                 </li>
                 <li>
-                  Menciptakan pemasaran global tanpa batas dan/atau limitasi
+                  Creating global marketing without boundaries or limitations.
                 </li>
                 <li>
-                  Menjaga keberlangsungan lingkungan mulai dari development
-                  dalam upaya keberlangsungan lingkungan di masa depan
+                  Maintaining environmental sustainability from development
+                  efforts towards a sustainable future.
                 </li>
               </ul>
             </div>
@@ -191,25 +172,20 @@ export default function WhoWeArePage() {
             </h2>
 
             <p className="mb-4 text-gray-700 leading-relaxed">
-              <strong>PT. Ansel Muda Berkarya</strong> merupakan bagian dari{" "}
-              <strong>Sister Collaboration</strong> bersama{" "}
-              <strong>PT.Followme Indonesia</strong> dan{" "}
-              <strong>PT.Indonesia Premium Goods Group</strong>,sebagai pemimpin
-              global di bidang kosmetika dan wangi-wangian. Kami adalah tiga
-              entitas yang bersinergi untuk menghadirkan solusi inovatif di
-              industri kosmetika dan wangi-wangian. Kolaborasi ini lahir dari
-              semangat bersama untuk mengembangkan industri yang berkelanjutan,
-              kreatif, dan berstandar .
+              <strong>PT. Ansel Muda Berkarya</strong> As a part of{" "}
+              <strong>Sister Collaboration</strong> with{" "}
+              <strong>PT. Followme Indonesia</strong> and{" "}
+              <strong>PT. Indonesia Premium Goods Group</strong>, as a global leader
+              in the cosmetics and fragrances industry. We are three entities
+              synergizing to bring innovative solutions to the cosmetics and
+              fragrances industry. This collaboration was born from a shared
+              spirit to develop a sustainable industry, creative, and standardized.
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              Melalui kemitraan strategis ini, kami berkomitmen untuk
-              
-              menyediakan produk dan layanan terbaik, memadukan keunggulan
-              teknologi, kreativitas lokal, serta nilai-nilai keberlanjutan yang
-              mendalam. Bersama, kami melangkah lebih jauh untuk memenuhi
-              kebutuhan pasar local dan Internasional, sambil tetap menjunjung
-              tinggi integritas, kualitas, dan keberagaman budaya.
+              Through this strategic partnership, we are committed to providing the best products and services, 
+              combining technological excellence, local creativity, and profound sustainability values. Together, 
+              we move forward to meet the needs of both local and international markets, while upholding integrity, quality, and cultural diversity.
             </p>
           </motion.div>
         </div>

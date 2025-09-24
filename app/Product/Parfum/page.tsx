@@ -16,7 +16,7 @@ export default function ParfumPage() {
       <section className="relative">
         <div className="relative h-[60vh] w-full">
           <Image
-            src="/Products/fragrance.png"
+            src="/images/beauty.jpeg"
             alt="Fragrance Product"
             fill
             className="object-cover"
@@ -42,13 +42,11 @@ export default function ParfumPage() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="text-3xl font-bold mb-6 text-center">
-            Parfum Eksklusif dengan Karakter dan Ketahanan Berbeda
+            Exclusive Perfumes with Distinct Character and Long-Lasting Performance
           </h2>
           <p className="text-lg text-gray-600 mb-16 text-center">
-            Koleksi wewangian kami dirancang dengan konsentrasi aroma yang
-            beragam—dari yang ringan dan menyegarkan hingga intens dan tahan
-            lama. Temukan jenis parfum yang sesuai dengan kepribadian dan
-            aktivitasmu.
+            Our fragrance collection is designed with a diverse aroma concentration, ranging from light and refreshing to intense and long-lasting. 
+            Find the type of perfume that suits your personality and lifestyle.
           </p>
         </motion.div>
 
@@ -77,28 +75,26 @@ export default function ParfumPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h3 className="text-2xl font-semibold mb-4 text-gray-800">
-              Jenis Parfum Berdasarkan Konsentrasi
+              Categories of Perfume by Concentration
             </h3>
             <p className="text-gray-600 mb-6">
-              Perbedaan parfum terletak pada konsentrasi minyak aromatiknya.
-              Semakin tinggi konsentrasi, semakin kuat dan lama wanginya
-              bertahan.
+              The difference in perfumes lies in the concentration of aromatic oils.
+              The higher the concentration, the stronger and longer the fragrance
+              lasts.
             </p>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
               <li>
-                <strong>Eau de Toilette (EDT):</strong> Ringan dan
-                menyegarkan. Ketahanan sekitar 3–5 jam. Cocok untuk penggunaan
+                <strong>Eau de Toilette (EDT):</strong> Light and
+                refreshing. Lasts about 3–5 hours. Suitable for daytime use.
                 siang hari.
               </li>
               <li>
-                <strong>Eau de Parfum (EDP):</strong> Lebih kuat dan tahan
-                lama. Bertahan hingga 6–8 jam. Cocok untuk acara formal dan
-                malam hari.
+                <strong>Eau de Parfum (EDP):</strong> Stronger and longer-lasting.
+                Lasts up to 6–8 hours. Suitable for formal events and evening wear.
               </li>
               <li>
-                <strong>Extrait de Parfum:</strong> Memiliki konsentrasi
-                tertinggi, dengan ketahanan 10–24 jam. Aromanya intens dan
-                mewah.
+                <strong>Extrait de Parfum:</strong> Has the highest concentration, 
+                lasting 10–24 hours. Its scent is intense and luxurious.
               </li>
             </ul>
           </motion.div>
@@ -117,18 +113,15 @@ export default function ParfumPage() {
       1. Extrait de Parfum
     </h3>
     <p className="text-gray-700 text-lg leading-relaxed">
-      Sering juga disebut <strong>pure perfume</strong> atau hanya{" "}
-      <strong>parfum</strong>, ini adalah bentuk parfum dengan konsentrasi
-      minyak wangi paling tinggi, biasanya antara 20% hingga 40%. Karena kadar
-      minyak esensialnya sangat pekat, wanginya terasa lebih dalam, kaya, dan
-      bisa bertahan sangat lama di kulit — bahkan bisa sampai seharian penuh,
-      kadang hingga 24 jam tergantung kondisi kulit dan cuaca.
+      Often referred to as <strong>pure perfume</strong> or simply <strong>parfum</strong>, 
+      this is the form of fragrance with the highest concentration of perfume oils, usually between 20% and 40%. 
+      Due to its highly concentrated essential oils, the scent feels deeper, richer, and can last very long on the skin — even up to a full day, 
+      sometimes as long as 24 hours depending on skin condition and weather.
     </p>
     <p className="text-gray-700 text-lg leading-relaxed mt-4">
-      Jenis ini tidak perlu disemprot banyak-banyak karena aromanya sangat
-      intens. Biasanya dipakai untuk momen spesial atau malam hari, dan punya
-      karakter <strong>mewah</strong>. Karena kadar konsentratnya tinggi,
-      harganya pun biasanya paling mahal dibanding jenis lainnya.
+      This type does not require a lot of sprays because its aroma is very intense. 
+      It is usually worn for special moments or at night, and has a <strong>luxurious</strong> character. 
+      Because of its high concentration, the price is usually the most expensive compared to other types.
     </p>
   </motion.div>
 
@@ -179,17 +172,14 @@ export default function ParfumPage() {
       2. Eau de Parfum (EDP)
     </h3>
     <p className="text-gray-700 text-lg leading-relaxed">
-      Eau de parfum adalah jenis yang paling banyak digunakan untuk parfum modern
-      yang dijual di pasaran. Konsentrasinya sedikit di bawah extrait, yaitu sekitar
-      15% sampai 20%. Wanginya tetap tahan lama — bisa sekitar 6 sampai 12 jam —
-      namun tidak sekuat extrait.
+      Eau de Parfum is the most widely used type of modern perfume available in the market. Its concentration is slightly lower than extrait, around 15% to 20%. The scent still lasts long — about 6 to 12 hours — but is not as strong as extrait.
     </p>
     <p className="text-gray-700 text-lg leading-relaxed mt-4">
-      EDP punya keseimbangan yang pas: aromanya cukup kuat untuk bertahan lama,
-      tapi tidak terlalu menyengat sehingga masih nyaman untuk digunakan
-      sehari-hari. Jenis ini biasanya jadi pilihan favorit karena aromanya tetap
-      terasa <strong>elegan</strong> dan <strong>mewah</strong>, tapi lebih fleksibel
-      dipakai dalam berbagai suasana, siang maupun malam.
+      EDP has the perfect balance: its aroma is strong enough to last long,
+      but not too overpowering, making it comfortable for everyday use.
+      This type is often the favorite choice because it still carries 
+      an air of <strong>elegance</strong> and <strong>luxury</strong>, 
+      while being flexible enough to wear in various settings, both day and night.
     </p>
   </motion.div>
 </div>
@@ -207,16 +197,14 @@ export default function ParfumPage() {
       3. Eau de Toilette (EDT)
     </h3>
     <p className="text-gray-700 text-lg leading-relaxed">
-      Kalau dibandingkan dengan dua jenis sebelumnya, eau de toilette punya
-      konsentrasi minyak parfum yang lebih ringan, sekitar 5% hingga 15%.
-      Karena lebih ringan, wanginya juga lebih segar dan cepat menguap — biasanya
-      bertahan antara 3 sampai 6 jam saja.
+      Compared to the previous two types, Eau de Toilette has a lighter perfume oil concentration, 
+      around 5% to 15%. Because it is lighter, the scent is fresher and evaporates more quickly — 
+      usually lasting only about 3 to 6 hours.
     </p>
     <p className="text-gray-700 text-lg leading-relaxed mt-4">
-      EDT sering digunakan untuk wewangian yang cocok dipakai saat siang hari,
-      cuaca panas, atau saat ingin aroma yang tidak terlalu menyolok. Aromanya
-      lebih cerah, ringan, dan sering kali punya nuansa citrus atau floral yang
-      segar. Biasanya juga lebih <strong>terjangkau</strong> dari segi harga.
+      EDT is often used for fragrances that are suitable for daytime wear,
+      hot weather, or when you want a scent that is not too overpowering. Its aroma is brighter, lighter, 
+      and often carries fresh citrus or floral notes. It is also generally more <strong>affordable</strong> in price.
     </p>
   </motion.div>
 

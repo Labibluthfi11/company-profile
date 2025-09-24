@@ -34,59 +34,53 @@ function SplashScreen({ onComplete }: { onComplete: () => void }) {
 
   return (
     <motion.div
-      className="fixed inset-0 bg-cover bg-center bg-no-repeat flex items-center justify-center z-50"
-      style={{ backgroundImage: "url('/images/ansel.jpg')" }}
+      className="fixed inset-0 flex items-center justify-center z-50"
+      style={{
+        background:
+          "linear-gradient(180deg, #003172 0%, #003D90 16%, #9AC5FF 100%)",
+      }}
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="text-center mt-10 px-4">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-8 px-6">
+        {/* Logo hitam */}
         <motion.div
-          initial={{ scale: 0, rotate: -180 }}
-          animate={{ scale: 1, rotate: 0 }}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="mb-8"
+          className="flex-shrink-0"
         >
           <Image
-            src="/images/amb.png"
+            src="/images/ambputih.png"
             alt="Logo PT. Ansel"
-            width={500}
-            height={500}
-            className="mx-auto w-[200px] sm:w-[300px] md:w-[400px] lg:w-[500px] object-contain"
+            width={400}
+            height={400}
+            className="object-contain"
             priority
           />
         </motion.div>
 
-        <motion.h1
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4"
-        >
-          PT. Ansel Muda Berkarya
-        </motion.h1>
-
-        <motion.p
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="text-base sm:text-lg md:text-xl text-blue-100"
-        >
-          Selamat datang Di Maklon Terbaik Indonesia 
-        </motion.p>
-
+        {/* Teks + Progress bar */}
         <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 1.2, duration: 0.5 }}
-          className="mt-8"
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="text-center md:text-left w-full max-w-md"
         >
-          <div className="w-16 h-1 bg-white mx-auto rounded-full">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4">
+            PT. ANSEL MUDA BERKARYA
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl text-whit mb-6">
+            Your idea our execution
+          </p>
+
+          <div className="w-full h-2 bg-white /30 rounded-full overflow-hidden">
             <motion.div
-              className="h-full bg-yellow-700 rounded-full"
-              initial={{ width: 0 }}
+              className="h-full bg-yellow-500"
+              initial={{ width: 100 }}
               animate={{ width: "100%" }}
-              transition={{ delay: 1.5, duration: 1 }}
+              transition={{ duration: 3, ease: "easeInOut" }}
             />
           </div>
         </motion.div>
@@ -95,153 +89,102 @@ function SplashScreen({ onComplete }: { onComplete: () => void }) {
   );
 }
 
-
 // Hero Section
 function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-screen bg-[#dbd4bb] bg-cover bg-center bg-no-repeat flex items-center relative pt-24 md:pt-0"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="text-center lg:text-left"
-          >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4 leading-tight">
-              PT. Ansel Muda Berkarya
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl text-black mb-6 leading-relaxed">
-              Mitra strategis Anda dalam industri kecantikan. Kami adalah spesialis
-              manufaktur kosmetik yang berkomitmen pada kualitas, keamanan,
-              dan efisiensi dalam setiap proses produksi.
-            </p>
+      {/* Blue Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#123c70] to-[#0a1a2f] z-0" />
 
-            {/* Tombol Hubungi Kami */}
-            <a
-              href="https://wa.me/6285891096731" // Nomor WA, format 62
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-white text-black font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-200 transition duration-300"
-            >
-              Hubungi Kami
-            </a>
-          </motion.div>
+      {/* Main Content Grid */}
+      <div className="container mx-auto px-6 relative z-5 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Left Side: Product Image */}
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="flex justify-center order-2 lg:order-1"
+        >
+          <div className="relative w-[500px] h-[300px] sm:w-[800px] sm:h-[750px]">
+            <Image
+              src="/images/scincer.png"
+              alt="Produk kosmetik PT. Ansel Muda Berkarya"
+              fill
+              className="object-contain"
+            />
+          </div>
+        </motion.div>
 
-          <motion.div
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="w-full max-w-md mx-auto"
+        {/* Right Side: Text and Button */}
+        <motion.div
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="text-center lg:text-left text-white order-1 lg:order-2"
+        >
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase mb-6 leading-tight">
+            PT. Ansel Muda Berkarya
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl mb-8 leading-relaxed">
+            “Your strategic partner in the beauty industry. We are a cosmetic manufacturing specialist committed to quality, safety, and efficiency in every stage of production.”
+          </p>
+
+          {/* Hubungi Kami Button */}
+          <a
+            href="https://wa.me/6282114631415"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-white text-black font-semibold py-3 px-5 rounded-full shadow-lg hover:bg-gray-transition duration-300"
           >
-            <div className="relative h-80 sm:h-96">
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-yellow-700 to-yellow-600 rounded-xloverflow-hidden"
-                animate={{ rotate: [0, 5, -5, 0] }}
-                transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY }}
-              />
-              <motion.div
-                className="absolute inset-4 bg-white rounded-2xl overflow-hidden"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
-              >
-                <Image
-                  src="/images/brands.jpg"
-                  alt="Logo AMBA"
-                  fill
-                  className="object-cover"
-                />
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
+            Hubungi Kami
+          </a>
+        </motion.div>
       </div>
     </section>
   );
 }
-
-
+ 
 // About Section
 function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Gambar kiri */}
-          <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src="/images/lab-nu.jpg"
-              alt="Lab PT Ansel"
-              className="rounded-xl w-full h-auto object-cover"
-            />
-          </motion.div>
+    <section className="relative w-full h-screen pt-24">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/lab.jpg')" }}
+      ></div>
 
-          {/* Teks kanan */}
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-             PT. Ansel Muda Berkarya adalah mitra strategis Anda di industri kecantikan.
-            </h2>
-            <p className="text-lg text-gray-600">
-              Kami menggabungkan alam, sains, dan presisi untuk memproduksi produk kosmetik berkualitas tinggi yang mencerminkan keanggunan, keamanan, dan inovasi.
-            </p>
-          </motion.div>
+      {/* Overlay gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#004AAD]/15 to-[#123C80]/90"></div>
+
+      {/* Content */}
+      <div className="relative z-10 flex items-center justify-end h-full px-5 ">
+        <div className="max-w-3xl text-white text-right">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
+            PT. Ansel Muda Berkarya <br /> Is your strategic partner in the beauty industry.
+          </h1>
+          <p className="text-lg md:text-xl leading-relaxed text-gray-100">
+            We combine nature, science, and precision to produce high-quality cosmetic products that embody elegance, safety, and innovation.
+          </p>
         </div>
       </div>
     </section>
   );
 }
 
-// Operating Hours Section
+//  Section
 function OperatingHoursSection() {
   return (
     <section
-      className="relative bg-[#D7C4A3] bg-center py-16"
+      className="relative bg-[#0a1a2f] bg-center py-2"
     >
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          {/* Teks kiri */}
-          <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-black text-2xl font-semibold mb-6 md:mb-0 md:max-w-md"
-          >
-            <p>Pelayanan Kita Dari Jam 8 Pagi</p>
-            <p>Sampai 5 Sore</p>
-          </motion.div>
-
           {/* Box kanan */}
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-xl px-6 py-4 shadow-lg flex items-center space-x-4"
-          >
-            <div className="w-12 h-12 bg-[#D7C4A3] rounded-full flex items-center justify-center">
-              <Phone className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <p className="text-gray-900 font-bold text-lg">
-                +62821-2869-4625
-              </p>
-              <p className="text-gray-500 text-sm">8am to 5pm</p>
-            </div>
-          </motion.div>
+          
         </div>
       </div>
     </section>
@@ -249,18 +192,24 @@ function OperatingHoursSection() {
 }
 
 function ServicesSection() {
-  const services = [
+  type ServiceItem = {
+    title: string;
+    video?: string;
+    image?: string;
+  };
+
+  const services: ServiceItem[] = [
     {
       title: "Ruang Pengemasan",
-      image: "/images/filing2.jpg",
+      video: "/vidio/Pengemasan.mp4", // pakai video
     },
     {
       title: "Project Development",
-      image: "/images/meeting.jpg",
+      image: "/images/meteng.jpg",
     },
     {
       title: "Lab Kimia Fisika",
-      image: "/images/labun.jpg",
+      video: "/vidio/labara.mp4",
     },
   ];
 
@@ -273,9 +222,9 @@ function ServicesSection() {
         viewport={{ once: true }}
         className="mb-12"
       >
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">Layanan Kami</h2>
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Kami hadir memberikan solusi menyeluruh dalam pengembangan produk kecantikan: dari formulasi, produksi, hingga pengemasan.
+        We provide comprehensive solutions in beauty product development: from formulation and production to packaging.
         </p>
       </motion.div>
 
@@ -292,12 +241,24 @@ function ServicesSection() {
           >
             <Link href="/Service">
               <div className="relative w-full h-[300px]">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                {item.video ? (
+                  <video
+                    src={item.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : item.image ? (
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : null}
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition" />
                 <div className="absolute bottom-4 left-4 text-left text-white z-10">
                   <h3 className="text-lg font-semibold">{item.title}</h3>
@@ -310,6 +271,7 @@ function ServicesSection() {
     </section>
   );
 }
+
 
 // Brands Section
 function BrandsPartnersSection() {
@@ -325,7 +287,7 @@ function BrandsPartnersSection() {
     <section id="brands" className="py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-4 text-center mb-10">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-           Partner Brand Kami
+          Our Brands Partner
         </h2>
       </div>
 

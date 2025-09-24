@@ -6,27 +6,27 @@ import { motion } from "framer-motion";
 
 const steps = [
   {
-    title: "Konsultasi Ide",
-    desc: "Diskusi awal memahami visi dan keunikan produk Anda.",
+    title: "Idea Consultation",
+    desc: "An initial discussion to understand your vision and the uniqueness of your product.",
   },
   {
-    title: "Pembuatan Sempel",
-    desc: "Membuat formulasi awal untuk sampel produk kosmetik.",
+    title: "Sample Development",
+    desc: "Creating the initial formulation for cosmetic product samples.",
   },
   {
-    title: "Diskusi Hasil",
-    desc: "Review dan revisi berdasarkan feedback Anda.",
+    title: "Result Discussion",
+    desc: "Review and revise based on your feedback.",
   },
   {
-    title: "Desain & Kemasan",
-    desc: "Pilih kemasan premium dan desain branding sesuai pasar.",
+    title: "Design & Packaging",
+    desc: "Choose premium packaging and branding design according to the market.",
   },
-  { title: "Perizinan", desc: "Urus BPOM dan legalitas hingga tuntas." },
-  { title: "Produksi", desc: "Produksi massal di fasilitas bersertifikat." },
-  { title: "Pengiriman", desc: "Distribusi produk ke lokasi Anda." },
+  { title: "Licensing", desc: "Manage BPOM and legalities until completion." },
+  { title: "Production", desc: "Mass production in certified facilities." },
+  { title: "Shipping", desc: "Distribute products to your location." },
   {
-    title: "Siap Dijual",
-    desc: "Produk siap tampil di pasar dengan identitas yang kuat.",
+    title: "Market Ready",
+    desc: "Products are ready to hit the market with a strong identity.",
   },
 ];
 
@@ -35,12 +35,10 @@ export default function ServicePage() {
     <div className="min-h-screen">
       <Navigation />
 
+
+ 
       {/* Hero Section */}
-      <section
-        className="min-h-[70vh] bg-[#D7C4A3] flex items-center justify-center text-center relative bg-cover bg-center pt-24"
-        
-      >
-        
+      <section className="absolute inset-0 bg-gradient-to-b from-[#123c70] to-[#0a1a2f] z-0 min-h-[60vh] flex items-center justify-center text-center relative bg-cover bg-center pt-24">
         <motion.div
           className="relative z-10 px-4"
           initial={{ opacity: 0, y: 40 }}
@@ -53,7 +51,7 @@ export default function ServicePage() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            Layanan Kami
+            Our Services
           </motion.h1>
           <motion.p
             className="text-white text-lg max-w-3xl mx-auto"
@@ -61,18 +59,18 @@ export default function ServicePage() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            Kami menyediakan layanan lengkap mulai dari pengembangan formula,
-            produksi, hingga pengemasan untuk brand kosmetik dan parfum Anda.
-            Kami hadir untuk mewujudkan ide menjadi produk yang siap dipasarkan.
+            We provide comprehensive services ranging from formula development and production 
+            to packaging for your cosmetic and fragrance brand. 
+            We are here to transform ideas into market-ready products.
           </motion.p>
         </motion.div>
       </section>
 
-      {/* Alur Layanan Kami */}
+      {/* Alur Layanan */}
       <section className="relative bg-gradient-to-b from-white to-[#F7F8FC] py-28 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-20">
-            Alur Layanan Kami
+            Our Services Flow
           </h2>
 
           <div className="relative">
@@ -107,10 +105,10 @@ export default function ServicePage() {
           </div>
         </div>
       </section>
-      {/* Section Gambar Kiri, Deskripsi Kanan */}
+
+      {/* Section Project Development */}
       <section className="bg-white py-24 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Gambar */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -118,13 +116,12 @@ export default function ServicePage() {
             viewport={{ once: true }}
           >
             <img
-              src="/images/meeting.jpg"
+              src="/images/meteng.jpg"
               alt="Lab Produksi"
               className="rounded-2xl shadow-xl object-cover w-full h-full max-h-[500px]"
             />
           </motion.div>
 
-          {/* Deskripsi */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -135,39 +132,31 @@ export default function ServicePage() {
               Project Development
             </h3>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Proses perencanaan, pelaksanaan, dan penyelesaian suatu proyek
-              untuk mencapai tujuan tertentu. Proses ini mencakup identifikasi
-              kebutuhan, perancangan solusi, pengelolaan sumber daya, dan
-              evaluasi hasil secara terstruktur dan terukur.
-            </p>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Dari mulai pembuatan Eksekutif Design konsep yang elegan, hingga
-              penyusunan Timeline produksi yang efisien, semua kami tangani
-              dengan teliti dan professional, Bersama kami Project Development
-              yang anda inginkan jadi lebih mudah, cepat, dan tepat sasaran.
+              The process of planning, execution, and completion of a project to achieve specific objectives.
             </p>
           </motion.div>
         </div>
       </section>
-      {/* Section Gambar Kiri, Deskripsi Kanan */}
+
+      {/* Section Lab */}
       <section className="bg-white py-24 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Gambar */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <img
-              src="/images/labun.jpg
-              "
-              alt="Lab Produksi"
+            <video
+              src="/vidio/labara.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
               className="rounded-2xl shadow-xl object-cover w-full h-full max-h-[500px]"
             />
           </motion.div>
 
-          {/* Deskripsi */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -175,23 +164,18 @@ export default function ServicePage() {
             viewport={{ once: true }}
           >
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Ruang Lab Kimia Fisika
+              Chemical & Physical Laboratory
             </h3>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Laboratorium adalah fasilitas ruangan yang kami rancang untuk
-              penelitian, praktikum, formulasi, dan pengujian produk-produk
-              kosmetik. Laboratorium ini dilengkapi dengan peralatan dan
-              perlengkapan khusus untuk mencampur bahan aktif, mengukur
-              stabilitas produk, serta memastikan keamanan dan kualitas sesuai
-              standar industri kosmetik.
+              The laboratory is a dedicated facility we designed for research, practical work, formulation, and testing of cosmetic products.
             </p>
           </motion.div>
         </div>
       </section>
-      {/* Section Gambar Kiri, Deskripsi Kanan */}
+
+      {/* Section Mixing */}
       <section className="bg-white py-24 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Gambar */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -205,7 +189,6 @@ export default function ServicePage() {
             />
           </motion.div>
 
-          {/* Deskripsi */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -213,34 +196,31 @@ export default function ServicePage() {
             viewport={{ once: true }}
           >
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Ruang mixing
+              Mixing Room
             </h3>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Di ruang mixing kami, bahan-bahan berkualitas tinggi diproses
-              dengan presisi dalam lingkungan steril dan terkontrol. Proses
-              pencampuran dilakukan oleh tenaga ahli menggunakan mesin
-              berstandar industri untuk menjamin stabilitas dan performa formula
-              yang konsisten.
+              In our mixing room, high-quality ingredients are processed with precision in a sterile and controlled environment.
             </p>
           </motion.div>
         </div>
       </section>
 
-
-      {/* Section Gambar Kiri, Deskripsi Kanan */}
+      {/* Section Video Pengemasan */}
       <section className="bg-white py-24 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Gambar */}
+          {/* Video */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            
           >
-            <img
-              src="/images/filing2.jpg"
-              alt="Lab Produksi"
+            <video
+              src="/vidio/Pengemasan.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
               className="rounded-2xl shadow-xl object-cover w-full h-full max-h-[500px]"
             />
           </motion.div>
@@ -253,41 +233,19 @@ export default function ServicePage() {
             viewport={{ once: true }}
           >
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Ruang pengemasan
+              Packaging Room
             </h3>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Ruang pengemasan kami dirancang khusus dengan standar kebersihan
-              dan efisiensi tinggi. Setiap produk dikemas oleh tim berpengalaman
-              dalam lingkungan steril untuk menjaga kualitas, keamanan, dan
-              estetika produk sebelum sampai ke tangan pelanggan Anda.
+              Our packaging room is specially designed with high cleanliness
+              and efficiency standards. Each product is packaged by an experienced team
+              in a sterile environment to maintain quality, safety, and
+              product aesthetics before reaching your customers' hands.
             </p>
           </motion.div>
         </div>
       </section>
 
-
-
-
       <Footer />
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

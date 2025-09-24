@@ -16,7 +16,7 @@ export default function SkincarePage() {
       <section className="relative">
         <div className="relative h-[60vh] w-full">
           <Image
-            src="/Products/skincare.png"
+            src="/images/beauty.jpeg"
             alt="Skincare Product"
             fill
             className="object-cover"
@@ -42,13 +42,12 @@ export default function SkincarePage() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="text-3xl font-bold mb-6 text-center">
-            Skincare untuk Kulit Sehat & Bersinar
+            Skincare for Healthy & Radiant Skin
           </h2>
           <p className="text-lg text-gray-600 mb-16 text-center">
-            Rangkaian produk perawatan kulit yang diformulasikan dengan
-            teknologi terkemuka, konsep yang menarik, bahan baku yang unik,
-            berkualitas, terjamin keamanan dan terbukti menghasilkan manfaat
-            sesuai standar pengujian ilmiah terkini
+            A range of skincare products formulated with advanced technology, captivating concepts, 
+            and unique, high-quality ingredients. Guaranteed safe and proven effective, delivering benefits in line with the latest 
+            scientific testing standards.
           </p>
         </motion.div>
 
@@ -77,11 +76,10 @@ export default function SkincarePage() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h3 className="text-2xl font-semibold mb-4 text-gray-800">
-              Rangkaian Lengkap Perawatan Wajah
+              Complete Facial Care Range
             </h3>
             <p className="text-gray-600 mb-6">
-              Mulai dari pembersih wajah, serum, hingga sunscreen — semuanya
-              tersedia dalam satu rangkaian premium.
+              From facial cleansers and serums to sunscreen — all available in one premium collection.
             </p>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
               <li>

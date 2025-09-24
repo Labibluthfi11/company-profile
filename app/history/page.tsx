@@ -11,7 +11,7 @@ export default function historyPage() {
 
       {/* Hero section atas dengan animasi */}
       <section
-        className="min-h-[70vh] bg-[#D7C4A3] flex items-center justify-center text-center relative bg-cover bg-center pt-24"
+        className="absolute inset-0 bg-gradient-to-b from-[#123c70] z-0 min-h-[50vh] bg-[#0a1a2f] flex items-center justify-center text-center relative bg-cover bg-center pt-24"
       >
         
         <motion.div
@@ -21,7 +21,7 @@ export default function historyPage() {
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="text-black text-4xl md:text-5xl font-bold mb-4"
+            className="text-white text-4xl md:text-5xl font-bold mb-4"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -36,7 +36,7 @@ export default function historyPage() {
 <section className="bg-white py-24 px-6">
   <div className="max-w-6xl mx-auto">
     <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
-      Perjalanan Kami
+      How We Began
     </h2>
 
     <div className="relative">
@@ -44,10 +44,10 @@ export default function historyPage() {
       <div className="absolute left-1/2 top-0 transform -translate-x-1/2 w-1 bg-gray-300 h-full z-0"></div>
 
       {[
-        { year: "18-July-2024 ", desc: "Launching PT. Ansel Muda Berkarya." },
-        { year: "15-Oktober-2024", desc: "Memperoleh sertifikasi CPKB." },
-        { year: "10-January-2025", desc: "Mulai berproduksi ." },
-        { year: "06-july-2025", desc: "Memperoleh sertifikasi halal dari MUI." },
+        { year: "18-July-2024 ", desc: "Launching of PT. Ansel Muda Berkarya." },
+        { year: "15-Oktober-2024", desc: "Obtained CPKB certification." },
+        { year: "10-January-2025", desc: "Commenced Production." },
+        { year: "06-july-2025", desc: "Obtained halal certification from MUI." },
         // Tambah tahun dan deskripsi lainnya di sini
       ].map((item, index) => (
         <motion.div

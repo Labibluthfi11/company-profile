@@ -27,8 +27,7 @@ export default function Footer() {
         <div>
           <h4 className="font-bold mb-4">WHAT WE OFFER</h4>
           <ul className="space-y-2 text-gray-400">
-            <li><a href="/Product">Product</a></li>
-            <li><a href="/Service">Service</a></li>
+            <li><a href="/Service">Service</a></li>   
           </ul>
         </div>
 
@@ -57,7 +56,7 @@ export default function Footer() {
       <div className="mt-12 text-center border-t border-white/10 pt-6">
         <div className="flex items-center justify-center space-x-3 mb-4">
           <Image
-            src="/images/amb-putih.png"
+            src="/images/ambputih.png"
             alt="Logo AMBA"
             width={40}
             height={40}
