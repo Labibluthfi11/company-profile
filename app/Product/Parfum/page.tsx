@@ -60,7 +60,7 @@ export default function ParfumPage() {
             className="w-full"
           >
             <Image
-              src="/products/botol-parfum.png"
+              src="/Products/botol-parfum.png"
               alt="Luxury Parfum Bottle"
               width={600}
               height={600}
