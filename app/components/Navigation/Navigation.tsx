@@ -1,36 +1,24 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
 
-export default function Navigation() {
-  const [isScrolled, setIsScrolled] = useState<boolean | null>(null);
+const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [aboutHover, setAboutHover] = useState(false);
   const [productHover, setProductHover] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const menuItems = [
-    { name: "About", path: "/about", isDropdown: true },
+    { name: "About", path: "/about" },
     { name: "Service", path: "/Service" },
-    { name: "Product", path: "/product", isDropdown: true },
+    { name: "Product", path: "/Product" },
     { name: "Contact", path: "/Contact" },
   ];
 
   const aboutDropdown = [
-    { name: "Who we are", path: "/about/who-we-are" },
-    { name: "PT Ansel History", path: "/history" },
+    { name: "Who We Are", path: "/about/who-we-are" },
     { name: "Certification", path: "/Certification" },
   ];
 
@@ -39,73 +27,41 @@ export default function Navigation() {
     { name: "Parfum", path: "/Product/Parfum" },
   ];
 
-  if (isScrolled === null) return null;
-
   return (
-    <motion.nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[#0a1a2f] backdrop-blur-md shadow-lg" : "bg-transparent"
-      }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.8 }}
-    >
-      {/* kasih tinggi fix 80px */}
-      <div className="container mx-auto px-4 h-20 flex items-center justify-between max-w-screen-xl">
-        {/* Logo dan Nama */}
-        <Link
-          href="/"
-          className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200"
-        >
-          <Image
-            src="/images/ambputih.png"
-            alt="Logo AMBA"
-            width={60}
-            height={60}
-            className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 object-contain transition-all duration-300"
-          />
-          <span
-            className={`text-lg sm:text-xl md:text-3xl font-bold ${
-              isScrolled ? "text-white" : "text-white"
-            }`}
-          >
-            PT. Ansel Muda Berkarya
-          </span>
+    <nav className="fixed top-0 left-0 w-full bg-[#0a1a2f] text-white shadow-md z-50">
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+        {/* Logo */}
+        <Link href="/" className="text-2xl font-bold tracking-wide">
+          MyCompany
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6 relative">
+        <div className="hidden md:flex space-x-8 items-center">
           {menuItems.map((item) => {
             if (item.name === "About") {
               return (
                 <div
                   key={item.name}
-                  className="relative"
+                  className="relative group"
                   onMouseEnter={() => setAboutHover(true)}
                   onMouseLeave={() => setAboutHover(false)}
                 >
-                  <motion.span
-                    className={`cursor-pointer hover:text-blue-600 ${
-                      isScrolled ? "text-white" : "text-white"
-                    }`}
-                    whileHover={{ y: -2 }}
-                  >
+                  <span className="cursor-pointer hover:text-blue-400 font-medium">
                     {item.name}
-                  </motion.span>
-
+                  </span>
                   <AnimatePresence>
                     {aboutHover && (
                       <motion.div
-                        initial={{ opacity: 0, y: -5 }}
+                        initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -5 }}
-                        className="absolute mt-2 py-3 px-4 rounded-xl shadow-xl w-52 bg-white"
+                        exit={{ opacity: 0, y: -10 }}
+                        className="absolute top-8 left-0 bg-[#0f2342] rounded-lg shadow-lg py-2 px-4"
                       >
                         {aboutDropdown.map((sub, index) => (
                           <Link
                             key={index}
                             href={sub.path}
-                            className="block py-2 text-sm font-medium text-black hover:text-blue-600 transition-colors"
+                            className="block py-1 px-2 hover:text-blue-400"
                           >
                             {sub.name}
                           </Link>
@@ -121,32 +77,26 @@ export default function Navigation() {
               return (
                 <div
                   key={item.name}
-                  className="relative"
+                  className="relative group"
                   onMouseEnter={() => setProductHover(true)}
                   onMouseLeave={() => setProductHover(false)}
                 >
-                  <motion.span
-                    className={`cursor-pointer hover:text-blue-600 ${
-                      isScrolled ? "text-white" : "text-white"
-                    }`}
-                    whileHover={{ y: -2 }}
-                  >
+                  <span className="cursor-pointer hover:text-blue-400 font-medium">
                     {item.name}
-                  </motion.span>
-
+                  </span>
                   <AnimatePresence>
                     {productHover && (
                       <motion.div
-                        initial={{ opacity: 0, y: -5 }}
+                        initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -5 }}
-                        className="absolute mt-2 py-3 px-4 rounded-xl shadow-xl w-52 bg-white"
+                        exit={{ opacity: 0, y: -10 }}
+                        className="absolute top-8 left-0 bg-[#0f2342] rounded-lg shadow-lg py-2 px-4"
                       >
                         {productDropdown.map((sub, index) => (
                           <Link
                             key={index}
                             href={sub.path}
-                            className="block py-2 text-sm font-medium text-black hover:text-blue-600 transition-colors"
+                            className="block py-1 px-2 hover:text-blue-400"
                           >
                             {sub.name}
                           </Link>
@@ -159,40 +109,109 @@ export default function Navigation() {
             }
 
             return (
-              <motion.a
+              <Link
                 key={item.name}
                 href={item.path}
-                className={`hover:text-blue-600 transition-colors ${
-                  isScrolled ? "text-white" : "text-white"
-                }`}
-                whileHover={{ y: -2 }}
+                className="hover:text-blue-400 font-medium"
               >
                 {item.name}
-              </motion.a>
+              </Link>
             );
           })}
         </div>
 
-        {/* Toggle Button Mobile */}
-        <div className="md:hidden">
-          <button onClick={() => setMenuOpen(!menuOpen)}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className={`w-6 h-6 ${isScrolled ? "text-white" : "text-white"}`}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 5.25h16.5M3.75 12h16.5M3.75 18.75h16.5"
-              />
-            </svg>
-          </button>
-        </div>
+        {/* Hamburger Button */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden text-white focus:outline-none"
+        >
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
-    </motion.nav>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="absolute top-20 left-0 w-full bg-[#0a1a2f] shadow-lg md:hidden z-40"
+          >
+            <div className="flex flex-col space-y-4 py-6 px-6 text-white">
+              {menuItems.map((item) => {
+                if (item.name === "About") {
+                  return (
+                    <div key={item.name}>
+                      <button
+                        onClick={() => setAboutHover(!aboutHover)}
+                        className="w-full text-left font-medium hover:text-blue-400"
+                      >
+                        {item.name}
+                      </button>
+                      {aboutHover && (
+                        <div className="ml-4 mt-2 flex flex-col space-y-2">
+                          {aboutDropdown.map((sub, index) => (
+                            <Link
+                              key={index}
+                              href={sub.path}
+                              className="text-sm hover:text-blue-400"
+                              onClick={() => setMenuOpen(false)}
+                            >
+                              {sub.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+
+                if (item.name === "Product") {
+                  return (
+                    <div key={item.name}>
+                      <button
+                        onClick={() => setProductHover(!productHover)}
+                        className="w-full text-left font-medium hover:text-blue-400"
+                      >
+                        {item.name}
+                      </button>
+                      {productHover && (
+                        <div className="ml-4 mt-2 flex flex-col space-y-2">
+                          {productDropdown.map((sub, index) => (
+                            <Link
+                              key={index}
+                              href={sub.path}
+                              className="text-sm hover:text-blue-400"
+                              onClick={() => setMenuOpen(false)}
+                            >
+                              {sub.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.path}
+                    className="font-medium hover:text-blue-400"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
   );
-}
+};
+
+export default Navigation;

@@ -150,7 +150,7 @@ function HeroSection() {
 // About Section
 function AboutSection() {
   return (
-    <section className="relative w-full h-screen pt-24">
+    <section className="relative w-full min-h-screen lg:h-screen pt-24">
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -161,13 +161,15 @@ function AboutSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#004AAD]/15 to-[#123C80]/90"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex items-center justify-end h-full px-5 ">
+      <div className="relative z-10 flex items-center justify-end h-full px-5">
         <div className="max-w-3xl text-white text-right">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
-            PT. Ansel Muda Berkarya <br /> Is your strategic partner in the beauty industry.
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-snug">
+            PT. Ansel Muda Berkarya <br /> Is your strategic partner in the
+            beauty industry.
           </h1>
-          <p className="text-lg md:text-xl leading-relaxed text-gray-100">
-            We combine nature, science, and precision to produce high-quality cosmetic products that embody elegance, safety, and innovation.
+          <p className="text-base md:text-xl leading-relaxed text-gray-100">
+            We combine nature, science, and precision to produce high-quality
+            cosmetic products that embody elegance, safety, and innovation.
           </p>
         </div>
       </div>
