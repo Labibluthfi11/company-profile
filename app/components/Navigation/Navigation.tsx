@@ -32,7 +32,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold tracking-wide">
-          MyCompany
+          PT. Ansel Muda Berkarya
         </Link>
 
         {/* Desktop Menu */}
