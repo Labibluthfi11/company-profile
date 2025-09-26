@@ -26,7 +26,7 @@ export default function CertificationPage() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            Our Certification
+            Sertifikasi kami
           </motion.h1>
           <motion.p
             className="text-white text-lg max-w-3xl mx-auto"
@@ -34,8 +34,8 @@ export default function CertificationPage() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            ANSEL has currently obtained CPKB and HALAL certifications as a commitment to product quality standards and compliance with halal requirements. 
-            These certifications reflect ANSEL’s dedication to ensuring production quality and adherence to national regulations. With this foundation, ANSEL is ready to deliver safe, high-quality cosmetic products that meet the needs of both local and global consumers.
+            ANSEL saat ini telah memperoleh sertifikasi CPKB dan HALAL sebagai komitmen terhadap standar kualitas produk dan kepatuhan terhadap persyaratan halal.
+            Sertifikasi ini mencerminkan dedikasi ANSEL untuk memastikan kualitas produksi dan kepatuhan terhadap peraturan nasional. Dengan landasan ini, ANSEL siap untuk menghadirkan produk kosmetik yang aman dan berkualitas tinggi yang memenuhi kebutuhan konsumen baik lokal maupun global.
           </motion.p>
         </motion.div>
       </section>
@@ -63,14 +63,14 @@ export default function CertificationPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-semibold mb-2">CPKB or GMP</h3>
+              <h3 className="text-xl font-semibold mb-2">CPKB atau GMP</h3>
               <p className="text-gray-700">
-                PT. Ansel Muda Berkarya is committed to delivering cosmetic
-                products that are not only creative and innovative but also
-                meet nationally recognized quality and safety standards.
-                Through CPKB (Good Manufacturing Practices) certification and
-                Halal certification from LPPOM MUI, We ensure that every production process is carried out with strict quality control, 
-                maintained hygiene, and in alignment with ethical principles as well as the needs of Indonesian consumers.
+                PT. Ansel Muda Berkarya berkomitmen untuk menghadirkan produk
+                kosmetik yang tidak hanya kreatif dan inovatif tetapi juga
+                memenuhi standar kualitas dan keamanan yang diakui secara nasional.
+                Melalui sertifikasi CPKB (Cara Pembuatan Kosmetik yang Baik) dan
+                sertifikasi Halal dari LPPOM MUI, kami memastikan bahwa setiap proses produksi dilakukan dengan pengendalian kualitas yang ketat,
+                menjaga kebersihan, dan selaras dengan prinsip etika serta kebutuhan konsumen Indonesia.
               </p>
             </motion.div>
           </div>
@@ -98,11 +98,11 @@ export default function CertificationPage() {
               viewport={{ once: true }}
             >
               <h3 className="text-xl font-semibold mb-2">
-                LPPOM MUI Halal Certification
+              Sertifikasi Halal dari LPPOM MUI
               </h3>
               <p className="text-gray-700">
-                We have also obtained halal certification from LPPOM MUI as a demonstration of our commitment to complying with Islamic principles. 
-                This ensures that our entire cosmetic and personal care production process is carried out in accordance with halal standards.
+                Kami juga telah memperoleh sertifikasi halal dari LPPOM MUI sebagai bukti komitmen kami untuk mematuhi prinsip-prinsip Islam.
+                Ini memastikan bahwa seluruh proses produksi kosmetik dan perawatan pribadi kami dilakukan sesuai dengan standar halal.
               </p>
             </motion.div>
           </div>

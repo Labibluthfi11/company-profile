@@ -19,7 +19,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Footer from "@/components/Footer/Footer";
-    
 
 import Navigation from "@/components/Navigation/Navigation";
 
@@ -129,7 +128,9 @@ function HeroSection() {
             PT. Ansel Muda Berkarya
           </h1>
           <p className="text-base sm:text-lg md:text-xl mb-8 leading-relaxed">
-            “Your strategic partner in the beauty industry. We are a cosmetic manufacturing specialist committed to quality, safety, and efficiency in every stage of production.”
+            “Mitra strategis Anda di industri kecantikan. 
+            Kami adalah spesialis manufaktur kosmetik yang berkomitmen pada kualitas, 
+            keamanan, dan efisiensi di setiap tahap produksi.”
           </p>
 
           {/* Hubungi Kami Button */}
@@ -146,7 +147,7 @@ function HeroSection() {
     </section>
   );
 }
- 
+
 // About Section
 function AboutSection() {
   return (
@@ -164,10 +165,10 @@ function AboutSection() {
       <div className="relative z-10 flex items-center justify-end h-full px-5 ">
         <div className="max-w-3xl text-white text-right">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-snug">
-            PT. Ansel Muda Berkarya <br /> Is your strategic partner in the beauty industry.
+            PT. Ansel Muda Berkarya <br /> Adalah mitra strategis Anda di industri kecantikan.
           </h1>
           <p className="text-lg md:text-xl leading-relaxed text-gray-100">
-            We combine nature, science, and precision to produce high-quality cosmetic products that embody elegance, safety, and innovation.
+            Kami menggabungkan alam, sains, dan presisi untuk memproduksi produk kosmetik berkualitas tinggi yang mencerminkan keanggunan, keamanan, dan inovasi.
           </p>
         </div>
       </div>
@@ -178,13 +179,10 @@ function AboutSection() {
 //  Section
 function OperatingHoursSection() {
   return (
-    <section
-      className="relative bg-[#0a1a2f] bg-center py-2"
-    >
+    <section className="relative bg-[#0a1a2f] bg-center py-2">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Box kanan */}
-          
         </div>
       </div>
     </section>
@@ -222,9 +220,10 @@ function ServicesSection() {
         viewport={{ once: true }}
         className="mb-12"
       >
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">Layanan Kami</h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
-        We provide comprehensive solutions in beauty product development: from formulation and production to packaging.
+          Kami menyediakan solusi komprehensif dalam pengembangan produk kecantikan: dari
+          formulasi dan produksi hingga pengemasan.
         </p>
       </motion.div>
 
@@ -272,7 +271,6 @@ function ServicesSection() {
   );
 }
 
-
 // Brands Section
 function BrandsPartnersSection() {
   const brands = [
@@ -287,7 +285,7 @@ function BrandsPartnersSection() {
     <section id="brands" className="py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-4 text-center mb-10">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          Our Brands Partner
+          Mitra Kami
         </h2>
       </div>
 
@@ -302,25 +300,23 @@ function BrandsPartnersSection() {
             ease: "linear",
           }}
         >
-                        {brands.map((brand, index) => (
-                <div key={index} className="flex-shrink-0 flex items-center justify-center h-70 w-65"
->
-                  <img
-                    src={brand.src}
-                    alt={brand.alt}
-                    className="h-full w-full object-contain"
-                  />
-                </div>
-              ))}
-
-
+          {brands.map((brand, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 flex items-center justify-center h-70 w-65"
+            >
+              <img
+                src={brand.src}
+                alt={brand.alt}
+                className="h-full w-full object-contain"
+              />
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>
   );
 }
-
-
 
 // Main Component
 export default function Component() {

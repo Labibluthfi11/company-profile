@@ -24,7 +24,7 @@ export default function WhoWeArePage() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            WHO WE ARE
+            SIAPA KAMI
           </motion.h1>
           <motion.p
             className="text-white text-lg max-w-3xl mx-auto"
@@ -32,7 +32,9 @@ export default function WhoWeArePage() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            PT. Ansel Muda Berkarya is an industry of limitless creativity, particularly in the field of fragrances. We provide services in the production and development of creative, authentic, and unique products, utilizing natural ingredients sourced from Indonesia.
+            PT. Ansel Muda Berkarya adalah industri dengan kreativitas tanpa batas, 
+            khususnya di bidang wewangian (fragrances). Kami menyediakan layanan produksi dan pengembangan produk yang kreatif, 
+            autentik, serta unik, dengan memanfaatkan bahan-bahan alami yang berasal dari Indonesia.
           </motion.p>
         </motion.div>
       </section>
@@ -62,13 +64,19 @@ export default function WhoWeArePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-snug">
-              Our journey began with a simple idea
+              Perjalanan kami dimulai dari sebuah ide sederhana
             </h2>
             <p className="mb-4 text-gray-700">
-              To become a trusted partner for brands aspiring to launch high-quality cosmetic products without the need to build factories or manage complex production processes.  PT. Ansel Muda Berkarya was founded with a clear mission to provide comprehensive cosmetic manufacturing solutions that are not only efficient, but also uphold the highest standards of safety, creativity, and excellence.
+              Untuk menjadi mitra terpercaya bagi brand yang ingin meluncurkan produk kosmetik berkualitas tinggi 
+              tanpa perlu membangun pabrik sendiri atau mengelola proses produksi yang rumit. PT. Ansel Muda Berkarya didirikan 
+              dengan misi yang jelas: memberikan solusi manufaktur kosmetik yang menyeluruh, efisien, 
+              serta menjunjung tinggi standar keamanan, kreativitas, dan keunggulan.
             </p>
             <p className="text-gray-700">
-              We believe that every brand has a unique story, and our role is to bring that story to life through tailor-made products such as shampoos, body washes, toners, perfumes, and many more. By combining modern manufacturing technology with deep insights into the beauty market, we ensure that every formula we create aligns with your brand’s values and your customers’ expectations.
+              Kami percaya bahwa setiap brand memiliki cerita unik, dan peran kami adalah menghidupkan cerita tersebut melalui 
+              produk-produk yang dibuat khusus seperti sampo, sabun tubuh, toner, parfum, dan banyak lagi. 
+              Dengan menggabungkan teknologi manufaktur modern dengan wawasan mendalam tentang pasar kecantikan, 
+              kami memastikan bahwa setiap formula yang kami buat selaras dengan nilai-nilai brand Anda dan harapan pelanggan Anda.
             </p>
 
             {/* Statistik */}
@@ -111,31 +119,31 @@ export default function WhoWeArePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black-700 leading-snug">
-              Vision & Mission
+              Visi & Misi
             </h2>
 
             {/* Visi */}
             <div className="mb-6">
-              <h3 className="text-xl font-semibold text-gray-700 mb-2">VISION</h3>
+              <h3 className="text-xl font-semibold text-gray-700 mb-2">VISI</h3>
               <p className="text-gray-600">
-                Creating global marketing without boundaries or limitations.
+                Menciptakan pemasaran global tanpa batasan dan hambatan.
               </p>
             </div>
 
             {/* Misi */}
             <div>
-              <h3 className="text-xl font-semibold text-gray-700 mb-2">MISSION</h3>
+              <h3 className="text-xl font-semibold text-gray-700 mb-2">MISI</h3>
               <ul className="list-disc pl-5 space-y-2 text-gray-600">
-                <li>Utilizing natural raw materials from Indonesia.</li>
+                <li>Memanfaatkan bahan baku alami dari Indonesia.</li>
                 <li>
-                  Educating and advocating customers in exploring creativity within the world of fragrances.
+                  Mengedukasi dan menginspirasi pelanggan dalam mengeksplorasi kreativitas di dunia wewangian.
                 </li>
                 <li>
-                  Creating global marketing without boundaries or limitations.
+                  Menciptakan pemasaran global tanpa batasan dan hambatan.
                 </li>
                 <li>
-                  Maintaining environmental sustainability from development
-                  efforts towards a sustainable future.
+                  Mempertahankan keberlanjutan lingkungan melalui upaya pengembangan
+                  menuju masa depan yang berkelanjutan.
                 </li>
               </ul>
             </div>
@@ -168,24 +176,23 @@ export default function WhoWeArePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black leading-snug">
-              Sister Collaboration
+              Kolaborasi
             </h2>
 
             <p className="mb-4 text-gray-700 leading-relaxed">
-              <strong>PT. Ansel Muda Berkarya</strong> As a part of{" "}
-              <strong>Sister Collaboration</strong> with{" "}
-              <strong>PT. Followme Indonesia</strong> and{" "}
-              <strong>PT. Indonesia Premium Goods Group</strong>, as a global leader
-              in the cosmetics and fragrances industry. We are three entities
-              synergizing to bring innovative solutions to the cosmetics and
-              fragrances industry. This collaboration was born from a shared
-              spirit to develop a sustainable industry, creative, and standardized.
+              <strong>PT. Ansel Muda Berkarya</strong> Merupakan bagian{" "}
+              <strong> Kolaborasi </strong> dengan {" "}
+              <strong>PT. Followme Indonesia</strong> dan {" "}
+              <strong>PT. Indonesia Premium Goods Group</strong>, sebagai pemimpin global
+              di industri kosmetik dan wewangian. Kami adalah tiga entitas
+              yang bersinergi untuk menghadirkan solusi inovatif di industri kosmetik dan
+              wewangian. Kolaborasi ini lahir dari semangat bersama untuk mengembangkan industri yang berkelanjutan, kreatif, dan terstandarisasi.
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              Through this strategic partnership, we are committed to providing the best products and services, 
-              combining technological excellence, local creativity, and profound sustainability values. Together, 
-              we move forward to meet the needs of both local and international markets, while upholding integrity, quality, and cultural diversity.
+              Melalui kemitraan strategis ini, kami berkomitmen untuk menyediakan produk dan layanan terbaik,
+              menggabungkan keunggulan teknologi, kreativitas lokal, dan nilai-nilai keberlanjutan yang mendalam. Bersama-sama,
+              kami melangkah maju untuk memenuhi kebutuhan pasar lokal dan internasional, sambil menjunjung tinggi integritas, kualitas, dan keberagaman budaya.
             </p>
           </motion.div>
         </div>

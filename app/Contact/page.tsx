@@ -65,13 +65,13 @@ export default function ContactPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold mb-4 text-gray-900">
-              Our team is available for your beauty solutions
+              Tim kami selalu siap untuk solusi kecantikan Anda
             </h2>
             <p className="text-gray-600 mb-8">
-              PT. Ansel Muda Berkarya is your trusted private label
-              manufacturing partner in the cosmetics and fragrance industry. We
-              are ready to support you from ideation to production, delivering
-              high-quality products with a distinctive Indonesian touch.
+              PT. Ansel Muda Berkarya adalah mitra manufaktur private label 
+              terpercaya Anda di industri kosmetik dan wewangian. Kami siap mendukung 
+              Anda mulai dari ideasi hingga produksi, dengan menghadirkan produk berkualitas tinggi
+              yang memiliki sentuhan khas Indonesia.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6">
@@ -88,7 +88,7 @@ export default function ContactPage() {
                 <div>
                   <p className="font-semibold">+62 821-2869-4625</p>
                   <p className="text-sm text-gray-500">
-                    Available from 8:00 AM to 5:00 PM
+                    Available from 8:00 AM to 5:00 PM 
                   </p>
                 </div>
               </div>
@@ -141,10 +141,10 @@ export default function ContactPage() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl text-black font-bold mb-4">Contact form</h2>
+          <h2 className="text-3xl text-black font-bold mb-4">Formulir Kontak</h2>
           <p className="text-gray-600 mb-8">
-            Contact us today to schedule a consultation and experience the difference that
-            passion, creativity, and expertise can make in your beauty and fragrance journey.
+            Hubungi kami hari ini untuk menjadwalkan konsultasi dan rasakan perbedaan yang
+            dapat dibuat oleh semangat, kreativitas, dan keahlian dalam perjalanan kecantikan dan wewangian Anda.
           </p>
 
           <motion.form
@@ -176,7 +176,7 @@ export default function ContactPage() {
                   htmlFor="from_name"
                   className="absolute left-3 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-3 peer-focus:text-sm peer-focus:text-black"
                 >
-                  Name
+                  Nama
                 </label>
               </motion.div>
 
@@ -223,7 +223,7 @@ export default function ContactPage() {
                 htmlFor="message"
                 className="absolute left-3 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-3 peer-focus:text-sm peer-focus:text-black"
               >
-                Message
+                Pesan
               </label>
             </motion.div>
 
@@ -234,7 +234,7 @@ export default function ContactPage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Send message
+              Kirim Pesan
             </motion.button>
           </motion.form>
         </motion.div>
@@ -250,7 +250,7 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Location
+            Lokasi Kami
           </motion.h3>
 
           <motion.div

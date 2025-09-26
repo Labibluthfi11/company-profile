@@ -28,7 +28,7 @@ export default function SkincarePage() {
               transition={{ duration: 0.8 }}
               className="text-white text-4xl md:text-5xl font-bold text-center px-4"
             >
-              Discover Our Premium Skincare Collection
+            Temukan Koleksi Perawatan Kulit Premium Kami
             </motion.h1>
           </div>
         </div>
@@ -42,12 +42,12 @@ export default function SkincarePage() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="text-3xl font-bold mb-6 text-center">
-            Skincare for Healthy & Radiant Skin
+            Skincare untuk Kulit Sehat & Bersinar
           </h2>
           <p className="text-lg text-gray-600 mb-16 text-center">
-            A range of skincare products formulated with advanced technology, captivating concepts, 
-            and unique, high-quality ingredients. Guaranteed safe and proven effective, delivering benefits in line with the latest 
-            scientific testing standards.
+            Rangkaian produk perawatan kulit yang diformulasikan dengan teknologi canggih, konsep yang menarik,
+            dan bahan berkualitas tinggi yang unik. Dijamin aman dan terbukti efektif, memberikan manfaat sesuai dengan
+            standar pengujian ilmiah terbaru.
           </p>
         </motion.div>
 
@@ -76,10 +76,10 @@ export default function SkincarePage() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h3 className="text-2xl font-semibold mb-4 text-gray-800">
-              Complete Facial Care Range
+              Rangkaian Perawatan Wajah Lengkap
             </h3>
             <p className="text-gray-600 mb-6">
-              From facial cleansers and serums to sunscreen — all available in one premium collection.
+              Dari pembersih wajah dan serum hingga tabir surya — semua tersedia dalam satu koleksi premium.
             </p>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
               <li>

@@ -1,3 +1,4 @@
+
 "use client";
 
 import Navigation from "@/components/Navigation/Navigation";
@@ -26,7 +27,7 @@ export default function historyPage() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            OUR HISTORY
+            PERJALANAN KAMI 
           </motion.h1>
           
         </motion.div>
@@ -36,7 +37,7 @@ export default function historyPage() {
 <section className="bg-white py-24 px-6">
   <div className="max-w-6xl mx-auto">
     <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
-      How We Began
+      Alur Sejarah PT. Ansel Muda Berkarya
     </h2>
 
     <div className="relative">
@@ -44,10 +45,10 @@ export default function historyPage() {
       <div className="absolute left-1/2 top-0 transform -translate-x-1/2 w-1 bg-gray-300 h-full z-0"></div>
 
       {[
-        { year: "18-July-2024 ", desc: "Launching of PT. Ansel Muda Berkarya." },
-        { year: "15-Oktober-2024", desc: "Obtained CPKB certification." },
-        { year: "10-January-2025", desc: "Commenced Production." },
-        { year: "06-july-2025", desc: "Obtained halal certification from MUI." },
+        { year: "18-July-2024 ", desc: "Launching PT. Ansel Muda Berkarya." },
+        { year: "15-Oktober-2024", desc: "Mendapatkan sertifikasi CPKB." },
+        { year: "10-January-2025", desc: "Memulai Produksi." },
+        { year: "06-july-2025", desc: "Mendapatkan sertifikasi halal dari MUI." },
         // Tambah tahun dan deskripsi lainnya di sini
       ].map((item, index) => (
         <motion.div

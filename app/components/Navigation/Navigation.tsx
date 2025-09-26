@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -9,17 +9,32 @@ const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [aboutHover, setAboutHover] = useState(false);
   const [productHover, setProductHover] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const menuItems = [
-    { name: "About", path: "/about" },
+    { name: "Tentang", path: "/about" },
     { name: "Service", path: "/Service" },
-    { name: "Product", path: "/Product" },
-    { name: "Contact", path: "/Contact" },
+    { name: "Produk", path: "/Product" },
+    { name: "Kontak", path: "/Contact" },
   ];
 
   const aboutDropdown = [
-    { name: "Who We Are", path: "/about/who-we-are" },
-    { name: "Certification", path: "/Certification" },
+    { name: "Siapa Kami", path: "/about/who-we-are" },
+    { name: "Sejarah", path: "/history" },
+    { name: "Sertifikasi", path: "/Certification" },
   ];
 
   const productDropdown = [
@@ -28,17 +43,31 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-[#0a1a2f] text-white shadow-md z-50">
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        scrolled ? "bg-[#0a1a2f] shadow-md" : "bg-transparent"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-25 text-white">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold tracking-wide">
-          PT. Ansel Muda Berkarya
-        </Link>
+<Link href="/" className="flex items-center space-x-2">
+  <img
+  src="images/ambputih.png"
+  alt="Logo PT Ansel"
+  width={40}
+  height={40}
+  className="h-10 w-auto"
+/>
+  <span className="text-2xl font-bold tracking-wide">
+    PT. Ansel Muda Berkarya
+  </span>
+</Link>
+
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 items-center">
           {menuItems.map((item) => {
-            if (item.name === "About") {
+            if (item.name === "Tentang") {
               return (
                 <div
                   key={item.name}
@@ -51,12 +80,13 @@ const Navigation = () => {
                   </span>
                   <AnimatePresence>
                     {aboutHover && (
-                      <motion.div
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        className="absolute top-8 left-0 bg-[#0f2342] rounded-lg shadow-lg py-2 px-4"
-                      >
+                    <motion.div
+                          initial={{ opacity: 0, y: -10 }}
+                              animate={{ opacity: 1, y: 0 }}
+                                  exit={{ opacity: 0, y: -10 }}
+                                  className="absolute top-8 left-0 bg-[white] text-[#0a1a2f] rounded-lg shadow-lg py-5 px-4 min-w-[160px]"
+                          >
+
                         {aboutDropdown.map((sub, index) => (
                           <Link
                             key={index}
@@ -73,7 +103,7 @@ const Navigation = () => {
               );
             }
 
-            if (item.name === "Product") {
+            if (item.name === "Produk") {
               return (
                 <div
                   key={item.name}
@@ -90,7 +120,7 @@ const Navigation = () => {
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
-                        className="absolute top-8 left-0 bg-[#0f2342] rounded-lg shadow-lg py-2 px-4"
+                        className="absolute top-8 left-0 bg-[white] text-[#0a1a2f] rounded-lg shadow-lg py-2 px-4"
                       >
                         {productDropdown.map((sub, index) => (
                           <Link
@@ -141,7 +171,7 @@ const Navigation = () => {
           >
             <div className="flex flex-col space-y-4 py-6 px-6 text-white">
               {menuItems.map((item) => {
-                if (item.name === "About") {
+                if (item.name === "Tentang") {
                   return (
                     <div key={item.name}>
                       <button
@@ -168,7 +198,7 @@ const Navigation = () => {
                   );
                 }
 
-                if (item.name === "Product") {
+                if (item.name === "Produk") {
                   return (
                     <div key={item.name}>
                       <button

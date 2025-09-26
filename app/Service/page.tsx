@@ -6,27 +6,27 @@ import { motion } from "framer-motion";
 
 const steps = [
   {
-    title: "Idea Consultation",
-    desc: "An initial discussion to understand your vision and the uniqueness of your product.",
+    title: "Konsultasi Awal",
+    desc: "Diskusi awal untuk memahami visi Anda dan keunikan produk Anda.",
   },
   {
-    title: "Sample Development",
-    desc: "Creating the initial formulation for cosmetic product samples.",
+    title: "Pengembangan Sampel",
+    desc: "Membuat formulasi awal untuk sampel produk kosmetik.",
   },
   {
-    title: "Result Discussion",
-    desc: "Review and revise based on your feedback.",
+    title: "Diskusi Hasil",
+    desc: "Tinjau dan revisi berdasarkan umpan balik Anda.",
   },
   {
-    title: "Design & Packaging",
-    desc: "Choose premium packaging and branding design according to the market.",
+    title: "Desain & Kemasan",
+    desc: "Pilih kemasan premium dan desain merek sesuai dengan pasar.",
   },
-  { title: "Licensing", desc: "Manage BPOM and legalities until completion." },
-  { title: "Production", desc: "Mass production in certified facilities." },
-  { title: "Shipping", desc: "Distribute products to your location." },
+  { title: "Lisensi", desc: "Kelola BPOM dan legalitas hingga selesai." },
+  { title: "Produksi", desc: "Produksi massal di fasilitas bersertifikat." },
+  { title: "Pengiriman", desc: "Distribusikan produk ke lokasi Anda." },
   {
-    title: "Market Ready",
-    desc: "Products are ready to hit the market with a strong identity.",
+    title: "Siap Pasar",
+    desc: "Produk siap diluncurkan ke pasar dengan identitas yang kuat.",
   },
 ];
 
@@ -51,7 +51,7 @@ export default function ServicePage() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            Our Services
+            layanan kami 
           </motion.h1>
           <motion.p
             className="text-white text-lg max-w-3xl mx-auto"
@@ -59,9 +59,9 @@ export default function ServicePage() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            We provide comprehensive services ranging from formula development and production 
-            to packaging for your cosmetic and fragrance brand. 
-            We are here to transform ideas into market-ready products.
+            Kami menyediakan layanan menyeluruh mulai dari pengembangan formula dan 
+            produksi hingga pengemasan untuk brand kosmetik dan wewangian Anda. 
+            Kami hadir untuk mewujudkan ide menjadi produk siap dipasarkan.
           </motion.p>
         </motion.div>
       </section>
@@ -70,7 +70,7 @@ export default function ServicePage() {
       <section className="relative bg-gradient-to-b from-white to-[#F7F8FC] py-28 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-20">
-            Our Services Flow
+            Alur Layanan Kami
           </h2>
 
           <div className="relative">
@@ -132,7 +132,7 @@ export default function ServicePage() {
               Project Development
             </h3>
             <p className="text-gray-600 text-lg leading-relaxed">
-              The process of planning, execution, and completion of a project to achieve specific objectives.
+              Proses perencanaan, pelaksanaan, dan penyelesaian suatu proyek untuk mencapai tujuan tertentu.
             </p>
           </motion.div>
         </div>
@@ -164,10 +164,10 @@ export default function ServicePage() {
             viewport={{ once: true }}
           >
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Chemical & Physical Laboratory
+              Laboratorium Kimia & Fisika
             </h3>
             <p className="text-gray-600 text-lg leading-relaxed">
-              The laboratory is a dedicated facility we designed for research, practical work, formulation, and testing of cosmetic products.
+              Laboratorium adalah fasilitas khusus yang kami rancang untuk penelitian, praktik, formulasi, dan pengujian produk kosmetik.
             </p>
           </motion.div>
         </div>
@@ -196,10 +196,10 @@ export default function ServicePage() {
             viewport={{ once: true }}
           >
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Mixing Room
+              Ruangan Mixing
             </h3>
             <p className="text-gray-600 text-lg leading-relaxed">
-              In our mixing room, high-quality ingredients are processed with precision in a sterile and controlled environment.
+              Di ruang pencampuran (mixing room) kami, bahan-bahan berkualitas tinggi diproses dengan presisi dalam lingkungan yang steril dan terkontrol.
             </p>
           </motion.div>
         </div>
@@ -233,13 +233,13 @@ export default function ServicePage() {
             viewport={{ once: true }}
           >
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Packaging Room
+              Ruang Pengemasan
             </h3>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Our packaging room is specially designed with high cleanliness
-              and efficiency standards. Each product is packaged by an experienced team
-              in a sterile environment to maintain quality, safety, and
-              product aesthetics before reaching your customers' hands.
+              Ruang pengemasan kami dirancang khusus dengan standar kebersihan 
+              dan efisiensi yang tinggi. Setiap produk dikemas oleh tim berpengalaman 
+              dalam lingkungan yang steril untuk menjaga kualitas, keamanan, 
+              serta estetika produk sebelum sampai ke tangan pelanggan Anda.
             </p>
           </motion.div>
         </div>
